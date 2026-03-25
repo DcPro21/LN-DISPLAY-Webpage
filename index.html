@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>LN DISPLAY | Premium Plastic Molding Contractor</title>
-  <meta name="description" content="LN DISPLAY: Leading plastic molding contractor specializing in injection molding, tooling, and contract manufacturing. ISO certified, high precision, global delivery.">
-  <!-- Google Fonts & modern reset -->
+  <title>LN Display & Contractor | Manufacturing Solutions</title>
+  <meta name="description" content="LN Display & Contractor Service Corp. - Outdoor advertising, silkscreen printing, carpentry works, plastic molding, metal fabrication since 2015.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     * {
       margin: 0;
@@ -18,543 +18,714 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #f0f4f9;
-      color: #111827;
+      background: #f5f7fc;
+      color: #1e293b;
       line-height: 1.5;
-      scroll-behavior: smooth;
     }
 
-    /* main layout card */
-    .promo-page {
-      max-width: 1300px;
-      margin: 2rem auto;
+    .page {
+      max-width: 1400px;
+      margin: 1.5rem auto;
       background: #ffffff;
       border-radius: 2rem;
-      box-shadow: 0 30px 55px -20px rgba(0, 0, 0, 0.25);
       overflow: hidden;
-      transition: all 0.2s;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
     }
 
-    /* ========= HERO with LN DISPLAY branding ========= */
+    /* Hero Section */
     .hero {
-      background: linear-gradient(125deg, #0a2b38 0%, #0f3f52 55%, #1c5e7a 100%);
-      padding: 3rem 3rem 4rem 3rem;
+      background: linear-gradient(135deg, #0a2b38 0%, #1b5e7a 100%);
+      padding: 3rem 3rem;
       color: white;
       position: relative;
       overflow: hidden;
     }
 
-    .hero::before {
-      content: "◈";
-      font-size: 22rem;
-      opacity: 0.06;
+    .hero-bg-shape {
       position: absolute;
-      bottom: -5rem;
-      right: -2rem;
+      top: -30%;
+      right: -10%;
+      width: 60%;
+      height: 150%;
+      background: rgba(255,255,255,0.03);
+      transform: rotate(15deg);
       pointer-events: none;
-      font-family: monospace;
-      transform: rotate(10deg);
     }
 
-    .company-tag {
+    .hero-content {
+      position: relative;
+      z-index: 2;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
       flex-wrap: wrap;
-      margin-bottom: 1.8rem;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
     }
 
-    .logo-area {
+    .hero-left {
+      flex: 1.2;
+      min-width: 280px;
+    }
+
+    .logo {
+      font-size: 1.4rem;
       font-weight: 800;
-      font-size: 1.9rem;
-      letter-spacing: -0.02em;
       background: rgba(255,255,255,0.12);
-      backdrop-filter: blur(4px);
-      padding: 0.4rem 1.2rem;
-      border-radius: 60px;
+      backdrop-filter: blur(8px);
       display: inline-block;
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      margin-bottom: 1.5rem;
       border: 1px solid rgba(255,255,255,0.2);
     }
 
-    .logo-area span {
-      font-weight: 300;
-      font-size: 1rem;
-      margin-left: 8px;
+    .logo span {
+      font-size: 0.7rem;
+      font-weight: 400;
     }
 
-    .badge-cert {
-      background: rgba(245, 176, 66, 0.2);
-      backdrop-filter: blur(4px);
-      padding: 0.4rem 1rem;
-      border-radius: 40px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      border: 1px solid rgba(245,176,66,0.4);
-    }
-
-    h1 {
-      font-size: 3.5rem;
+    .hero-left h1 {
+      font-size: 2.5rem;
       font-weight: 800;
       line-height: 1.2;
-      letter-spacing: -0.02em;
-      max-width: 800px;
-      margin: 1rem 0 1rem 0;
+      margin-bottom: 1rem;
     }
 
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 620px;
-      opacity: 0.92;
-      margin-bottom: 2rem;
+    .hero-left p {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-bottom: 1.8rem;
+      max-width: 500px;
     }
 
-    .cta-group {
+    .btn-group {
       display: flex;
+      gap: 1rem;
       flex-wrap: wrap;
-      gap: 1.2rem;
-      align-items: center;
     }
 
     .btn-primary {
       background: #f5b042;
       color: #0a2b38;
-      padding: 0.9rem 2rem;
+      padding: 0.8rem 1.8rem;
       font-weight: 700;
-      border-radius: 60px;
-      text-decoration: none;
-      transition: all 0.25s;
-      display: inline-block;
-      font-size: 1rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-primary:hover {
-      background: #ffc569;
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-    }
-
-    .btn-outline-light {
-      background: transparent;
-      border: 1.5px solid rgba(255,255,255,0.75);
-      color: white;
-      padding: 0.9rem 2rem;
-      font-weight: 600;
-      border-radius: 60px;
+      border-radius: 40px;
       text-decoration: none;
       transition: 0.2s;
     }
 
-    .btn-outline-light:hover {
-      background: rgba(255,255,255,0.1);
-      border-color: white;
+    .btn-primary:hover {
+      background: #ffc46b;
+      transform: translateY(-2px);
     }
 
-    /* stats row */
-    .stats-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 1rem;
-      background: white;
-      padding: 2rem 3rem;
-      border-bottom: 1px solid #eef2f8;
-    }
-
-    .stat-item {
-      text-align: center;
-      flex: 1;
-      min-width: 110px;
-    }
-
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 800;
-      color: #1b6b8f;
-      letter-spacing: -0.01em;
-    }
-
-    .stat-label {
-      font-size: 0.8rem;
-      text-transform: uppercase;
+    .btn-outline {
+      border: 1.5px solid rgba(255,255,255,0.6);
+      color: white;
+      padding: 0.8rem 1.8rem;
       font-weight: 600;
-      color: #5f7f9a;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: 0.2s;
     }
 
-    /* two column core + contractor essentials */
-    .core-offer {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2.5rem;
-      padding: 3rem;
-      background: #ffffff;
-      border-bottom: 1px solid #eef2f8;
-    }
-
-    .offer-text {
-      flex: 1.3;
-    }
-
-    .offer-text h2 {
-      font-size: 2rem;
-      font-weight: 800;
-      color: #0a2b38;
-      margin-bottom: 1.2rem;
-      letter-spacing: -0.3px;
-    }
-
-    .feature-list {
-      list-style: none;
-      margin-top: 1.6rem;
-    }
-
-    .feature-list li {
-      display: flex;
-      gap: 0.9rem;
-      align-items: center;
-      margin-bottom: 1rem;
-      font-weight: 500;
-      color: #1f4e6e;
-    }
-
-    .feature-icon {
-      font-size: 1.5rem;
-      min-width: 2rem;
-    }
-
-    .offer-highlight {
+    /* Large Animated Logo with Transparent Image - No Glow */
+    .hero-right {
       flex: 0.9;
-      background: #f8fafd;
-      border-radius: 1.5rem;
-      padding: 1.8rem;
-      border: 1px solid #e6edf4;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.02);
+      min-width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .offer-highlight h3 {
-      font-size: 1.4rem;
+    .animated-logo {
+      text-align: center;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .logo-image {
+      width: 300px;
+      height: 300px;
+      object-fit: contain;
+      filter: none;
+      animation: none;
+      border-radius: 0;
+      background: transparent;
+    }
+
+    .logo-text-large {
+      font-size: 1.8rem;
       font-weight: 800;
-      margin-bottom: 1rem;
-      color: #155f7c;
-    }
-
-    .highlight-badge {
-      background: #eef2fc;
-      color: #1a5a7a;
-      border-radius: 50px;
-      padding: 0.3rem 1rem;
-      font-size: 0.75rem;
-      font-weight: 700;
-      display: inline-block;
+      letter-spacing: 2px;
       margin-top: 1rem;
+      background: linear-gradient(135deg, #fff, #f5b042);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: fadeInUp 0.8s ease-out;
     }
 
-    /* capabilities grid - full essentials */
-    .capabilities {
-      padding: 3rem;
-      background: #ffffff;
+    .logo-text-sub {
+      font-size: 0.8rem;
+      opacity: 0.8;
+      letter-spacing: 1px;
+      margin-top: 0.3rem;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Services Grid */
+    .services-section {
+      padding: 2.5rem 2.5rem;
+      background: white;
       border-bottom: 1px solid #eef2f8;
     }
 
     .section-title {
-      font-size: 2rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
+      font-size: 1.6rem;
+      font-weight: 700;
       color: #0a2b38;
+      margin-bottom: 0.5rem;
     }
 
     .section-sub {
-      color: #5f7f9a;
+      color: #6c86a0;
       margin-bottom: 2rem;
-      font-size: 1rem;
-      max-width: 650px;
+      font-size: 0.9rem;
     }
 
-    .grid-cap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.8rem;
-      margin-top: 1rem;
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
     }
 
-    .cap-card {
-      background: #f9fbfe;
-      flex: 1 1 210px;
-      border-radius: 1.2rem;
-      padding: 1.6rem 1rem;
-      text-align: center;
+    .service-card {
+      background: #fafcff;
+      border-radius: 1rem;
+      padding: 1.2rem;
+      border: 1px solid #eef2f8;
       transition: all 0.2s;
-      border: 1px solid #eef2fa;
     }
 
-    .cap-card:hover {
-      transform: translateY(-5px);
-      border-color: #c9ddec;
-      box-shadow: 0 12px 18px -6px rgba(0,0,0,0.08);
+    .service-card:hover {
+      border-color: #f5b042;
+      transform: translateY(-3px);
     }
 
-    .cap-icon {
-      font-size: 2.5rem;
+    .service-icon {
+      font-size: 1.8rem;
       margin-bottom: 0.8rem;
     }
 
-    .cap-card h4 {
-      font-weight: 800;
-      margin-bottom: 0.4rem;
-      font-size: 1.2rem;
+    .service-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #115a6e;
     }
 
-    .cap-card p {
-      font-size: 0.8rem;
-      color: #4b6f8c;
+    .service-list-items {
+      margin-top: 0.5rem;
+      font-size: 0.7rem;
+      color: #3a5a6e;
+      list-style: none;
     }
 
-    /* project spotlight / testimonial-like */
-    .project-spotlight {
-      background: linear-gradient(115deg, #eef4fc 0%, #ffffff 100%);
-      margin: 0 2rem 2rem 2rem;
-      border-radius: 1.8rem;
+    .service-list-items li {
+      padding: 0.2rem 0;
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    /* Product Gallery with Images */
+    .gallery-section {
+      padding: 2.5rem;
+      background: #fafcff;
+      border-bottom: 1px solid #eef2f8;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .gallery-item {
+      background: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      transition: 0.2s;
+      border: 1px solid #eef2f8;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    }
+
+    .gallery-img {
+      height: 200px;
+      background: #eef2f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .gallery-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover .gallery-img img {
+      transform: scale(1.03);
+    }
+
+    .gallery-info {
+      padding: 1rem;
+    }
+
+    .gallery-info h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #0a2b38;
+    }
+
+    .gallery-info p {
+      font-size: 0.7rem;
+      color: #6c86a0;
+      margin-top: 0.2rem;
+    }
+
+    /* Equipment & Manpower Row */
+    .details-row {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      padding: 2rem 2rem;
       gap: 1.5rem;
-      border: 1px solid #e0ebf5;
+      padding: 2rem 2.5rem;
+      background: white;
+      border-bottom: 1px solid #eef2f8;
     }
 
-    .spotlight-text {
-      flex: 2;
+    .equipment-box, .manpower-box {
+      flex: 1;
+      min-width: 260px;
     }
 
-    .spotlight-text h3 {
-      font-size: 1.5rem;
-      font-weight: 800;
+    .box-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0a2b38;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-left: 3px solid #f5b042;
+      padding-left: 0.8rem;
+    }
+
+    .equip-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .equip-tag {
+      background: #f1f5f9;
+      padding: 0.3rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #1e4a5e;
+    }
+
+    .manpower-list {
+      list-style: none;
+    }
+
+    .manpower-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px dashed #eef2f8;
+      font-size: 0.8rem;
+    }
+
+    /* Company Info Card */
+    .company-card {
+      background: linear-gradient(135deg, #0a2b38, #0f3f52);
+      margin: 1.5rem 2.5rem;
+      border-radius: 1.2rem;
+      padding: 1.5rem;
+      color: white;
+    }
+
+    .company-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: space-between;
+    }
+
+    .company-item {
+      flex: 1;
+      min-width: 150px;
+    }
+
+    .company-item h5 {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.7;
       margin-bottom: 0.5rem;
     }
 
-    .btn-secondary {
-      background: #1b6b8f;
-      color: white;
-      padding: 0.8rem 2rem;
-      border-radius: 60px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.2s;
-      white-space: nowrap;
-      display: inline-block;
+    .company-item p {
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
     }
 
-    .btn-secondary:hover {
-      background: #0e526f;
-      transform: translateY(-1px);
-    }
-
-    /* contact & full contractor essentials */
+    /* Contact Bar */
     .contact-bar {
-      background: #ffffff;
-      padding: 1.5rem 3rem;
-      border-bottom: 1px solid #eef2f8;
+      padding: 1rem 2.5rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       gap: 1rem;
+      background: white;
+      border-top: 1px solid #eef2f8;
+      border-bottom: 1px solid #eef2f8;
     }
 
-    .cert-icons {
+    .badges {
       display: flex;
-      gap: 1.2rem;
-      font-size: 0.85rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.7rem;
       font-weight: 500;
-      color: #2b5e7e;
+      color: #2c5a70;
     }
 
-    .footer-main {
-      background: #0a2b38;
-      color: #cde3ef;
-      padding: 2rem 3rem;
+    /* Footer */
+    .footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 2rem 2.5rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 2rem;
-    }
-
-    .footer-col h4 {
-      color: white;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      font-size: 1rem;
-      letter-spacing: -0.2px;
+      gap: 1.5rem;
     }
 
     .footer-col p, .footer-col a {
-      color: #bdd7e8;
-      text-decoration: none;
-      font-size: 0.85rem;
-      margin-bottom: 0.5rem;
-      display: block;
-    }
-
-    .footer-col a:hover {
-      color: #f5b042;
-    }
-
-    .copyright-row {
-      background: #05212b;
-      text-align: center;
-      padding: 1rem;
       font-size: 0.75rem;
-      color: #8dafc2;
+      color: #94a3b8;
+      text-decoration: none;
+      margin-bottom: 0.3rem;
+    }
+
+    .copyright {
+      background: #0a0f1a;
+      text-align: center;
+      padding: 0.8rem;
+      font-size: 0.65rem;
+      color: #64748b;
     }
 
     @media (max-width: 780px) {
-      .promo-page {
+      .page {
         margin: 0;
         border-radius: 0;
       }
       .hero {
-        padding: 2rem 1.5rem;
+        padding: 1.8rem;
       }
-      h1 {
-        font-size: 2.2rem;
+      .hero-right {
+        min-width: 250px;
       }
-      .logo-area {
-        font-size: 1.5rem;
+      .logo-image {
+        width: 130px;
+        height: 130px;
       }
-      .stats-row, .core-offer, .capabilities {
-        padding: 2rem 1.5rem;
+      .logo-text-large {
+        font-size: 1.2rem;
       }
-      .project-spotlight {
+      .services-section, .gallery-section, .details-row, .company-card, .contact-bar, .footer {
+        padding: 1.5rem;
+      }
+      .company-card {
         margin: 1rem;
-        flex-direction: column;
-        text-align: center;
-      }
-      .contact-bar {
-        flex-direction: column;
-        text-align: center;
-      }
-      .footer-main {
-        flex-direction: column;
-        padding: 2rem 1.5rem;
       }
     }
   </style>
 </head>
 <body>
-<div class="promo-page">
-  <!-- Hero: LN DISPLAY prominent -->
+<div class="page">
+  <!-- Hero Section -->
   <div class="hero">
-    <div class="company-tag">
-      <div class="logo-area">LN DISPLAY <span>⚙️ plastic molding contractor</span></div>
-      <div class="badge-cert">ISO 9001:2025 · IATF 16949</div>
-    </div>
-    <h1>Precision plastic molding & contract manufacturing solutions</h1>
-    <p>LN DISPLAY delivers end-to-end injection molding, tooling, and assembly for automotive, medical, electronics & consumer goods. Your reliable contractor from prototype to high-volume production.</p>
-    <div class="cta-group">
-      <a href="#" class="btn-primary">📄 Request a quote →</a>
-      <a href="#" class="btn-outline-light">📘 Download capability brochure</a>
+    <div class="hero-bg-shape"></div>
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="logo">LN DISPLAY & CONTRACTOR <span>service corp.</span></div>
+        <h1>Complete manufacturing & display solutions</h1>
+        <p>Outdoor advertising · Silkscreen printing · Carpentry works · Plastic molding · Metal fabrication — one-stop contractor.</p>
+        <div class="btn-group">
+          <a href="#" class="btn-primary"><i class="fas fa-file-invoice"></i> Contact Us!</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="animated-logo">
+          <img src="assets/logo.png" alt="LN Display & Contractor Logo" class="logo-image" onerror="this.onerror=null; this.src='https://placehold.co/200x200/transparent?text=LN+Display'; this.style.background='transparent';">
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Stats: credibility essentials -->
-  <div class="stats-row">
-    <div class="stat-item"><div class="stat-number">480+</div><div class="stat-label">Active molds</div></div>
-    <div class="stat-item"><div class="stat-number">65M+</div><div class="stat-label">Parts/year</div></div>
-    <div class="stat-item"><div class="stat-number">35+</div><div class="stat-label">Presses (50T-1800T)</div></div>
-    <div class="stat-item"><div class="stat-number">99.2%</div><div class="stat-label">On-time delivery</div></div>
+  <!-- Services Section -->
+  <div class="services-section">
+    <div class="section-title">Core services</div>
+    <div class="section-sub">Integrated manufacturing solutions for retail, advertising, and industrial sectors</div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🏙️</div>
+        <h3>Outdoor Advertising</h3>
+        <ul class="service-list-items">
+          <li>• Panaflex / Signages</li>
+          <li>• Van Billboard</li>
+          <li>• Sign Boards, Tire Cover</li>
+          <li>• Inkjet Printing</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🖨️</div>
+        <h3>Silkscreen Printing</h3>
+        <ul class="service-list-items">
+          <li>• Streamers / Banners / Buntings</li>
+          <li>• Price Tags / Name Tags</li>
+          <li>• Shelf Talkers / Menu Boards</li>
+          <li>• Stickers & Flanger Signs</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🪚</div>
+        <h3>Carpentry Works</h3>
+        <ul class="service-list-items">
+          <li>• Display Racks / Gondola</li>
+          <li>• Booths / Sampling Tables</li>
+          <li>• Wire/Acrylic Dispensers</li>
+          <li>• Fiberglass / Mobile Carts</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚙️</div>
+        <h3>Plastic & Machine Shop</h3>
+        <ul class="service-list-items">
+          <li>• Vacuum Forming</li>
+          <li>• Moulding Fabrication</li>
+          <li>• Acrylic Assembly</li>
+          <li>• Custom Plastic Components</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <!-- Core offer: LN DISPLAY specialization & contractor focus -->
-  <div class="core-offer">
-    <div class="offer-text">
-      <h2>LN DISPLAY: <span style="color:#1b6b8f;">trusted contractor</span> for complex injection molding</h2>
-      <p>We combine advanced engineering, in-house toolmaking, and full assembly lines. As a premier contract manufacturer, we reduce time-to-market and optimize total cost of ownership. Our clients rely on LN DISPLAY for mission-critical components.</p>
-      <ul class="feature-list">
-        <li><span class="feature-icon">🏭</span> 35 injection molding machines (50T – 1,800T)</li>
-        <li><span class="feature-icon">🔩</span> In-house mold design, repair & hot runner systems</li>
-        <li><span class="feature-icon">📦</span> Secondary ops: ultrasonic welding, pad printing, EMI shielding</li>
-        <li><span class="feature-icon">🌱</span> Sustainable polymers, bio-based & recycled compounds</li>
-        <li><span class="feature-icon">📐</span> Full metrology lab: CMM, optical inspection, PPAP level 3</li>
+  <!-- Product Gallery with Images from assets folder -->
+  <div class="gallery-section">
+    <div class="section-title">Product showcase</div>
+    <div class="section-sub">Quality craftsmanship across displays, signage, and metal fabrications</div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <div class="gallery-img">
+          <img src="assets/panaflex-signage.jpg" alt="Panaflex Signage" onerror="this.onerror=null; this.parentElement.style.background='linear-gradient(135deg, #eef2ff, #e0e8f0)'; this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-sign\' style=\'font-size: 2.5rem; opacity: 0.5; color:#115a6e;\'></i><span style=\'margin-left: 0.5rem; font-size:0.8rem;\'>Panaflex</span>'">
+        </div>
+        <div class="gallery-info">
+          <h4>Panaflex & Billboards</h4>
+          <p>Durable outdoor advertising with vibrant inkjet printing</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img">
+          <img src="assets/display-rack.jpg" alt="Display Rack" onerror="this.onerror=null; this.parentElement.style.background='linear-gradient(135deg, #eef2ff, #e0e8f0)'; this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-shopping-cart\' style=\'font-size: 2.5rem; opacity: 0.5; color:#115a6e;\'></i><span style=\'margin-left: 0.5rem; font-size:0.8rem;\'>Display Rack</span>'">
+        </div>
+        <div class="gallery-info">
+          <h4>Custom Display Racks</h4>
+          <p>Gondola, wire dispenser, retail fixtures</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img">
+          <img src="assets/silkscreen-banners.jpg" alt="Silkscreen Banners" onerror="this.onerror=null; this.parentElement.style.background='linear-gradient(135deg, #eef2ff, #e0e8f0)'; this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-print\' style=\'font-size: 2.5rem; opacity: 0.5; color:#115a6e;\'></i><span style=\'margin-left: 0.5rem; font-size:0.8rem;\'>Banners</span>'">
+        </div>
+        <div class="gallery-info">
+          <h4>Silkscreen Banners</h4>
+          <p>Streamers, buntings, promotional materials</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img">
+          <img src="assets/metal-fabrication.jpg" alt="Metal Fabrication" onerror="this.onerror=null; this.parentElement.style.background='linear-gradient(135deg, #eef2ff, #e0e8f0)'; this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-industry\' style=\'font-size: 2.5rem; opacity: 0.5; color:#115a6e;\'></i><span style=\'margin-left: 0.5rem; font-size:0.8rem;\'>Metal Works</span>'">
+        </div>
+        <div class="gallery-info">
+          <h4>Structural Metal</h4>
+          <p>Welded frames, booths, enclosures, custom structures</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img">
+          <img src="assets/acrylic-display.jpg" alt="Acrylic Display" onerror="this.onerror=null; this.parentElement.style.background='linear-gradient(135deg, #eef2ff, #e0e8f0)'; this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-gem\' style=\'font-size: 2.5rem; opacity: 0.5; color:#115a6e;\'></i><span style=\'margin-left: 0.5rem; font-size:0.8rem;\'>Acrylic</span>'">
+        </div>
+        <div class="gallery-info">
+          <h4>Acrylic Displays</h4>
+          <p>Custom acrylic fabrication, dispensers, signage</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img">
+          <img src="assets/booth-fabrication.jpg" alt="Booth Fabrication" onerror="this.onerror=null; this.parentElement.style.background='linear-gradient(135deg, #eef2ff, #e0e8f0)'; this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-store\' style=\'font-size: 2.5rem; opacity: 0.5; color:#115a6e;\'></i><span style=\'margin-left: 0.5rem; font-size:0.8rem;\'>Booths</span>'">
+        </div>
+        <div class="gallery-info">
+          <h4>Trade Show Booths</h4>
+          <p>Custom booths, sampling tables, exhibition displays</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Equipment & Manpower Row -->
+  <div class="details-row">
+    <div class="equipment-box">
+      <div class="box-title"><i class="fas fa-microchip"></i> Major Equipment</div>
+      <div class="equip-tags">
+        <span class="equip-tag">Spot Welding (25)</span>
+        <span class="equip-tag">Straight Cutter (6)</span>
+        <span class="equip-tag">Wire Bender (6)</span>
+        <span class="equip-tag">Welding Machine (7)</span>
+        <span class="equip-tag">Grinder (7)</span>
+        <span class="equip-tag">EPSON Printers (3)</span>
+        <span class="equip-tag">HP LATEX Printer</span>
+        <span class="equip-tag">Acrylic Laser Cutter</span>
+        <span class="equip-tag">CNC Router</span>
+        <span class="equip-tag">Box Bender / Tube Bender</span>
+        <span class="equip-tag">Compressors (4)</span>
+        <span class="equip-tag">Laminator</span>
+      </div>
+    </div>
+    <div class="manpower-box">
+      <div class="box-title"><i class="fas fa-users"></i> Manpower</div>
+      <ul class="manpower-list">
+        <li><span>Daily Rate Workers</span><span>44 persons (incl. 2 mechanics, 1 electrician)</span></li>
+        <li><span>Packing Department</span><span>25</span></li>
+        <li><span>Carpentry Department</span><span>10</span></li>
+        <li><span>Metal Fabrication</span><span>30</span></li>
+        <li><span>Printing Department</span><span>5</span></li>
+        <li><span>Acrylic Assembly</span><span>25</span></li>
+        <li><span><strong>Total Piece Rate</strong></span><span><strong>95+</strong></span></li>
       </ul>
     </div>
-    <div class="offer-highlight">
-      <h3>🔥 Contractor advantage</h3>
-      <p><strong>New customer promo 2025</strong><br>15% off first tooling + free DFM (design for manufacturing) analysis for orders over 15k units. Includes sampling & first-article inspection.</p>
-      <div class="highlight-badge">⏳ Limited slots — contact LN DISPLAY today</div>
-      <div style="margin-top: 1.2rem; font-size:0.85rem; border-top: 1px dashed #d4e0ea; padding-top: 1rem;">✨ Rapid prototyping in 7 days | flexible vendor managed inventory</div>
-    </div>
   </div>
 
-  <!-- Capabilities (ESSENTIALS: all core molding contractor services) -->
-  <div class="capabilities">
-    <div class="section-title">Complete molding & engineering capabilities</div>
-    <div class="section-sub">LN DISPLAY offers a one-stop shop for plastic injection molding, tool construction, and contract assembly — all under one roof.</div>
-    <div class="grid-cap">
-      <div class="cap-card"><div class="cap-icon">⚙️</div><h4>Injection Molding</h4><p>Thermoplastics, LSR, multi-shot, insert/overmolding</p></div>
-      <div class="cap-card"><div class="cap-icon">🛠️</div><h4>Precision Tooling</h4><p>Class 101-102 molds, aluminum prototypes, steel production</p></div>
-      <div class="cap-card"><div class="cap-icon">📊</div><h4>DFM & Engineering</h4><p>Mold flow analysis, part optimization, FEA simulation</p></div>
-      <div class="cap-card"><div class="cap-icon">🔗</div><h4>Assembly & Logistics</h4><p>Automated assembly, packaging, Kanban, JIT delivery</p></div>
-      <div class="cap-card"><div class="cap-icon">🧪</div><h4>Material Science</h4><p>Engineering resins, filled nylons, medical-grade, UL listed</p></div>
-    </div>
-  </div>
-
-  <!-- Featured project / real contractor success story -->
-  <div style="padding: 0 2rem 0.5rem 2rem;">
-    <div class="project-spotlight">
-      <div class="spotlight-text">
-        <h3>🏆 LN DISPLAY in action: high-precision medical device housing</h3>
-        <p>Reduced scrap rate by 27% and improved cycle efficiency by 22% for a Class II medical customer. Full validation, IQ/OQ/PQ support, and cleanroom-ready molding. <strong>ISO 13485 compliant manufacturing available.</strong></p>
+  <!-- Company Information Card -->
+  <div class="company-card">
+    <div class="company-grid">
+      <div class="company-item">
+        <h5>Registration</h5>
+        <p>SEC: CS201521895</p>
+        <p>Mayor's: 16-M0609-01074</p>
+        <p>TIN: 009-164-725-000</p>
       </div>
-      <a href="#" class="btn-secondary">Read case study →</a>
+      <div class="company-item">
+        <h5>Address</h5>
+        <p>B4 L6 Apple Ville Subd.</p>
+        <p>Tullahan Road, Sta. Quiteria</p>
+        <p>Caloocan City, Philippines</p>
+      </div>
+      <div class="company-item">
+        <h5>Contact</h5>
+        <p>📞 8-2914500 (telefax)</p>
+        <p>✉️ ln_display@yahoo.com</p>
+        <p>✉️ ln_display24@gmail.com</p>
+      </div>
+      <div class="company-item">
+        <h5>Leadership</h5>
+        <p>Rolando Martinez - President</p>
+        <p>Adelaida Martinez - VP/Finance</p>
+        <p>M. Aguinaldo, A. Aguinaldo, J. Nolasco - BOD</p>
+      </div>
+      <div class="company-item">
+        <h5>Banking</h5>
+        <p>BDO Proj. 8 Shorthorn, QC</p>
+      </div>
     </div>
   </div>
 
-  <!-- Essential company details, certifications and quick contact -->
+  <!-- Contact Bar -->
   <div class="contact-bar">
-    <div class="cert-icons">
-      <span>✅ ISO 9001:2025</span>
-      <span>✅ IATF 16949</span>
-      <span>✅ ISO 13485 (medical)</span>
-      <span>✅ RoHS / REACH</span>
+    <div class="badges">
+      <span><i class="fas fa-check-circle"></i> SEC Registered</span>
+      <span><i class="fas fa-check-circle"></i> BIR Compliant</span>
+      <span><i class="fas fa-check-circle"></i> PhilGEPS Accredited</span>
+      <span><i class="fas fa-check-circle"></i> PEZA</span>
     </div>
-    <div style="font-size: 0.85rem; color:#1a6685;">🌎 Global supply chain | USA & Mexico plants | Asia partnership</div>
+    <div><i class="fas fa-envelope"></i> ln_display24@gmail.com | <i class="fas fa-phone"></i> 8-2914500</div>
   </div>
 
-  <!-- Footer: full essentials for LN DISPLAY contractor -->
-  <div class="footer-main">
+  <!-- Footer -->
+  <div class="footer">
     <div class="footer-col">
-      <h4>LN DISPLAY</h4>
-      <p>Leading plastic molding contractor since 2008.</p>
-      <p>📍 2850 Mold Tech Drive, Sterling Heights, MI 48310</p>
-      <p>📍 Global hub: Querétaro, MX • Shanghai, CN</p>
+      <p><strong>LN DISPLAY & CONTRACTOR SERVICE CORP.</strong></p>
+      <p>Outdoor Advertising · Silkscreen · Carpentry · Plastic Molding · Metal Fabrication</p>
+      <p>Wire Equipment · CNC Routing · Laser Cutting · Printing</p>
     </div>
     <div class="footer-col">
-      <h4>Contact & Sales</h4>
-      <p>📞 +1 (888) 566-4273</p>
-      <p>✉️ contracts@lndisplay.com</p>
-      <p>📠 +1 (586) 555-0198</p>
-      <p>🕒 24/7 engineering support</p>
+      <p><a href="#">Request quotation</a></p>
+      <p><a href="#">Capability brochure</a></p>
+      <p><a href="#">Product catalog</a></p>
     </div>
     <div class="footer-col">
-      <h4>Quick links</h4>
-      <p><a href="#">RFQ / Submit parts</a></p>
-      <p><a href="#">Capability guide (PDF)</a></p>
-      <p><a href="#">Material portfolio</a></p>
-      <p><a href="#">Quality certifications</a></p>
-    </div>
-    <div class="footer-col">
-      <h4>Contractor services</h4>
-      <p>Injection molding • Tool making</p>
-      <p>Product assembly • Supply chain management</p>
-      <p>Design for manufacturing • Validation</p>
+      <p>📍 B4 L6 Apple Ville Subd., Tullahan Rd.</p>
+      <p>Sta. Quiteria, Caloocan City</p>
+      <p>📞 8-2914500 | ✉️ ln_display@yahoo.com</p>
     </div>
   </div>
-  <div class="copyright-row">
-    © 2025 LN DISPLAY — Precision Plastic Molding Contractor. All rights reserved. | Leading partner for automotive, medical, electronics & industrial sectors.
+  <div class="copyright">
+    © 2025 LN DISPLAY & CONTRACTOR SERVICE CORP. | SEC: CS201521895 | All rights reserved
   </div>
 </div>
+
+<!-- Simple script to handle image fallback styling -->
+<script>
+  // Ensure images that fail to load show a nice placeholder
+  document.querySelectorAll('.gallery-img img').forEach(img => {
+    img.addEventListener('error', function() {
+      const parent = this.parentElement;
+      parent.style.background = 'linear-gradient(135deg, #eef2ff, #e0e8f0)';
+      parent.style.display = 'flex';
+      parent.style.alignItems = 'center';
+      parent.style.justifyContent = 'center';
+      parent.innerHTML = '<i class="fas fa-image" style="font-size: 2.5rem; opacity: 0.5; color:#115a6e;"></i><span style="margin-left: 0.5rem; font-size:0.8rem; color:#115a6e;">Product Image</span>';
+    });
+  });
+</script>
 </body>
 </html>
