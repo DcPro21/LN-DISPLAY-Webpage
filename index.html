@@ -20,22 +20,23 @@
       font-family: 'Inter', sans-serif;
       background: #f5f7fc;
       color: #1e293b;
-      line-height: 1.5;
+      line-height: 1.4;
     }
 
+    /* Compact Page */
     .page {
-      max-width: 1400px;
-      margin: 1.5rem auto;
+      max-width: 1200px;
+      margin: 1rem auto;
       background: #ffffff;
-      border-radius: 2rem;
+      border-radius: 1.5rem;
       overflow: hidden;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
     }
 
-    /* Hero Section */
+    /* Hero Section - Compact */
     .hero {
       background: linear-gradient(135deg, #0a2b38 0%, #1b5e7a 100%);
-      padding: 3rem 3rem;
+      padding: 1.8rem 2rem;
       color: white;
       position: relative;
       overflow: hidden;
@@ -59,59 +60,65 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      gap: 2rem;
+      gap: 1.5rem;
     }
 
     .hero-left {
       flex: 1.2;
-      min-width: 280px;
+      min-width: 240px;
     }
 
     .logo {
-      font-size: 1.4rem;
+      font-size: 1rem;
       font-weight: 800;
       background: rgba(255,255,255,0.12);
       backdrop-filter: blur(8px);
       display: inline-block;
-      padding: 0.4rem 1.2rem;
+      padding: 0.3rem 1rem;
       border-radius: 40px;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       border: 1px solid rgba(255,255,255,0.2);
     }
 
     .logo span {
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       font-weight: 400;
     }
 
     .hero-left h1 {
-      font-size: 2.5rem;
+      font-size: 1.8rem;
       font-weight: 800;
       line-height: 1.2;
-      margin-bottom: 1rem;
+      margin-bottom: 0.6rem;
     }
 
     .hero-left p {
-      font-size: 1rem;
+      font-size: 0.85rem;
       opacity: 0.9;
-      margin-bottom: 1.8rem;
+      margin-bottom: 1.2rem;
       max-width: 500px;
     }
 
     .btn-group {
       display: flex;
-      gap: 1rem;
+      gap: 0.8rem;
       flex-wrap: wrap;
     }
 
     .btn-primary {
       background: #f5b042;
       color: #0a2b38;
-      padding: 0.8rem 1.8rem;
+      padding: 0.6rem 1.4rem;
       font-weight: 700;
       border-radius: 40px;
       text-decoration: none;
       transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      border: none;
+      font-size: 0.85rem;
     }
 
     .btn-primary:hover {
@@ -119,23 +126,10 @@
       transform: translateY(-2px);
     }
 
-    .btn-outline {
-      border: 1.5px solid rgba(255,255,255,0.6);
-      color: white;
-      padding: 0.8rem 1.8rem;
-      font-weight: 600;
-      border-radius: 40px;
-      text-decoration: none;
-      transition: 0.2s;
-    }
-
-    /* Large Animated Logo with Transparent Image - No Glow */
+    /* Logo Image Compact */
     .hero-right {
-      flex: 0.9;
-      min-width: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      flex: 0.7;
+      min-width: 180px;
     }
 
     .animated-logo {
@@ -144,144 +138,106 @@
     }
 
     .logo-image {
-      width: 300px;
-      height: 300px;
+      width: 140px;
+      height: 140px;
       object-fit: contain;
-      filter: none;
-      animation: none;
-      border-radius: 0;
       background: transparent;
-    }
-
-    .logo-text-large {
-      font-size: 1.8rem;
-      font-weight: 800;
-      letter-spacing: 2px;
-      margin-top: 1rem;
-      background: linear-gradient(135deg, #fff, #f5b042);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      animation: fadeInUp 0.8s ease-out;
-    }
-
-    .logo-text-sub {
-      font-size: 0.8rem;
-      opacity: 0.8;
-      letter-spacing: 1px;
-      margin-top: 0.3rem;
     }
 
     @keyframes float {
       0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
+      50% { transform: translateY(-5px); }
     }
 
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Services Grid */
+    /* Services Section - Compact */
     .services-section {
-      padding: 2.5rem 2.5rem;
+      padding: 1.5rem 2rem;
       background: white;
       border-bottom: 1px solid #eef2f8;
     }
 
     .section-title {
-      font-size: 1.6rem;
+      font-size: 1.3rem;
       font-weight: 700;
       color: #0a2b38;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
     }
 
     .section-sub {
       color: #6c86a0;
-      margin-bottom: 2rem;
-      font-size: 0.9rem;
+      margin-bottom: 1.2rem;
+      font-size: 0.8rem;
     }
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
     }
 
     .service-card {
       background: #fafcff;
-      border-radius: 1rem;
-      padding: 1.2rem;
+      border-radius: 0.8rem;
+      padding: 1rem;
       border: 1px solid #eef2f8;
       transition: all 0.2s;
     }
 
     .service-card:hover {
       border-color: #f5b042;
-      transform: translateY(-3px);
+      transform: translateY(-2px);
     }
 
     .service-icon {
-      font-size: 1.8rem;
-      margin-bottom: 0.8rem;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
     }
 
     .service-card h3 {
-      font-size: 1rem;
+      font-size: 0.9rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
       color: #115a6e;
     }
 
     .service-list-items {
-      margin-top: 0.5rem;
-      font-size: 0.7rem;
+      margin-top: 0.3rem;
+      font-size: 0.65rem;
       color: #3a5a6e;
       list-style: none;
     }
 
     .service-list-items li {
-      padding: 0.2rem 0;
+      padding: 0.15rem 0;
       display: flex;
-      gap: 0.4rem;
+      gap: 0.3rem;
     }
 
-    /* Product Gallery with Images */
+    /* Gallery Compact */
     .gallery-section {
-      padding: 2.5rem;
+      padding: 1.5rem 2rem;
       background: #fafcff;
       border-bottom: 1px solid #eef2f8;
     }
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
     }
 
     .gallery-item {
       background: white;
-      border-radius: 1rem;
+      border-radius: 0.8rem;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
       transition: 0.2s;
       border: 1px solid #eef2f8;
     }
 
-    .gallery-item:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
-    }
-
     .gallery-img {
-      height: 200px;
+      height: 140px;
       background: #eef2f8;
       display: flex;
       align-items: center;
@@ -293,67 +249,62 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.3s;
-    }
-
-    .gallery-item:hover .gallery-img img {
-      transform: scale(1.03);
     }
 
     .gallery-info {
-      padding: 1rem;
+      padding: 0.7rem;
     }
 
     .gallery-info h4 {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       font-weight: 700;
       color: #0a2b38;
     }
 
     .gallery-info p {
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       color: #6c86a0;
-      margin-top: 0.2rem;
+      margin-top: 0.1rem;
     }
 
-    /* Equipment & Manpower Row */
+    /* Details Row Compact */
     .details-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
-      padding: 2rem 2.5rem;
+      gap: 1rem;
+      padding: 1.2rem 2rem;
       background: white;
       border-bottom: 1px solid #eef2f8;
     }
 
     .equipment-box, .manpower-box {
       flex: 1;
-      min-width: 260px;
+      min-width: 240px;
     }
 
     .box-title {
-      font-size: 1rem;
+      font-size: 0.85rem;
       font-weight: 700;
       color: #0a2b38;
-      margin-bottom: 1rem;
+      margin-bottom: 0.7rem;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
       border-left: 3px solid #f5b042;
-      padding-left: 0.8rem;
+      padding-left: 0.7rem;
     }
 
     .equip-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.6rem;
+      gap: 0.5rem;
     }
 
     .equip-tag {
       background: #f1f5f9;
-      padding: 0.3rem 0.9rem;
+      padding: 0.2rem 0.7rem;
       border-radius: 30px;
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       font-weight: 500;
       color: #1e4a5e;
     }
@@ -365,117 +316,289 @@
     .manpower-list li {
       display: flex;
       justify-content: space-between;
-      padding: 0.5rem 0;
+      padding: 0.3rem 0;
       border-bottom: 1px dashed #eef2f8;
-      font-size: 0.8rem;
+      font-size: 0.7rem;
     }
 
-    /* Company Info Card */
+    /* Company Card Compact */
     .company-card {
       background: linear-gradient(135deg, #0a2b38, #0f3f52);
-      margin: 1.5rem 2.5rem;
-      border-radius: 1.2rem;
-      padding: 1.5rem;
+      margin: 1rem 2rem;
+      border-radius: 1rem;
+      padding: 1rem 1.2rem;
       color: white;
     }
 
     .company-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
+      gap: 1rem;
       justify-content: space-between;
     }
 
     .company-item {
       flex: 1;
-      min-width: 150px;
+      min-width: 130px;
     }
 
     .company-item h5 {
-      font-size: 0.65rem;
+      font-size: 0.6rem;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
       opacity: 0.7;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
     }
 
     .company-item p {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       font-weight: 500;
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.15rem;
     }
 
-    /* Contact Bar */
+    /* Contact Bar Compact */
     .contact-bar {
-      padding: 1rem 2.5rem;
+      padding: 0.7rem 2rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      gap: 1rem;
+      gap: 0.8rem;
       background: white;
       border-top: 1px solid #eef2f8;
       border-bottom: 1px solid #eef2f8;
+      font-size: 0.7rem;
     }
 
     .badges {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
-      font-size: 0.7rem;
+      gap: 0.8rem;
+      font-size: 0.65rem;
       font-weight: 500;
       color: #2c5a70;
     }
 
-    /* Footer */
+    /* Footer Compact */
     .footer {
       background: #0f172a;
       color: #cbd5e1;
-      padding: 2rem 2.5rem;
+      padding: 1.2rem 2rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 1.5rem;
+      gap: 1rem;
     }
 
     .footer-col p, .footer-col a {
-      font-size: 0.75rem;
+      font-size: 0.65rem;
       color: #94a3b8;
       text-decoration: none;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.2rem;
     }
 
     .copyright {
       background: #0a0f1a;
       text-align: center;
-      padding: 0.8rem;
-      font-size: 0.65rem;
+      padding: 0.5rem;
+      font-size: 0.6rem;
       color: #64748b;
     }
 
-    @media (max-width: 780px) {
+    /* ========= COMPACT MODAL - PURE CONTACT (SMALLER) ========= */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.25s ease;
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .contact-modal {
+      background: white;
+      max-width: 460px;
+      width: 90%;
+      border-radius: 1.2rem;
+      overflow: hidden;
+      transform: scale(0.96);
+      transition: transform 0.2s ease;
+      box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+    }
+    .modal-overlay.active .contact-modal {
+      transform: scale(1);
+    }
+    .modal-header {
+      background: linear-gradient(135deg, #0a2b38, #1b5e7a);
+      padding: 0.9rem 1.3rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .modal-header h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .close-modal {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      line-height: 1;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: 0.2s;
+    }
+    .close-modal:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    .modal-body {
+      padding: 1.2rem 1.3rem;
+    }
+    /* Compact contact cards */
+    .contact-info-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+    .contact-card {
+      background: #f8fafc;
+      border-radius: 0.9rem;
+      padding: 0.7rem 1rem;
+      border-left: 3px solid #f5b042;
+      transition: all 0.15s;
+    }
+    .contact-card i {
+      font-size: 1.1rem;
+      color: #f5b042;
+      width: 28px;
+      text-align: center;
+      margin-right: 8px;
+    }
+    .contact-card .contact-title {
+      font-weight: 700;
+      font-size: 0.75rem;
+      color: #0a2b38;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+    }
+    .contact-card .contact-detail {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin-left: 36px;
+      word-break: break-word;
+    }
+    .contact-card .contact-sub {
+      font-size: 0.6rem;
+      color: #5b7a97;
+      margin-left: 36px;
+      margin-top: 2px;
+    }
+    .compact-divider {
+      height: 1px;
+      background: #eef2f8;
+      margin: 0.2rem 0;
+    }
+    .office-hours-compact {
+      background: #fef9e6;
+      border-radius: 0.8rem;
+      padding: 0.6rem;
+      text-align: center;
+      font-size: 0.65rem;
+      color: #a16207;
+      margin-top: 0.2rem;
+    }
+    .action-buttons-compact {
+      display: flex;
+      gap: 0.6rem;
+      margin-top: 0.8rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .copy-btn-sm {
+      background: #eef2ff;
+      border: none;
+      padding: 0.35rem 0.8rem;
+      border-radius: 30px;
+      font-size: 0.6rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: #115a6e;
+    }
+    .copy-btn-sm:hover {
+      background: #f5b042;
+      color: #0a2b38;
+    }
+    .toast-msg {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0a2b38;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      z-index: 1100;
+      opacity: 0;
+      transition: opacity 0.2s;
+      pointer-events: none;
+    }
+    .toast-msg.show {
+      opacity: 1;
+    }
+
+    @media (max-width: 680px) {
       .page {
         margin: 0;
         border-radius: 0;
       }
       .hero {
-        padding: 1.8rem;
-      }
-      .hero-right {
-        min-width: 250px;
+        padding: 1.2rem;
       }
       .logo-image {
-        width: 130px;
-        height: 130px;
+        width: 100px;
+        height: 100px;
       }
-      .logo-text-large {
-        font-size: 1.2rem;
+      .hero-left h1 {
+        font-size: 1.4rem;
       }
       .services-section, .gallery-section, .details-row, .company-card, .contact-bar, .footer {
-        padding: 1.5rem;
+        padding: 1rem;
       }
       .company-card {
-        margin: 1rem;
+        margin: 0.8rem;
+      }
+      .contact-card .contact-detail {
+        font-size: 0.7rem;
+        margin-left: 28px;
       }
     }
   </style>
@@ -489,14 +612,14 @@
       <div class="hero-left">
         <div class="logo">LN DISPLAY & CONTRACTOR <span>service corp.</span></div>
         <h1>Complete manufacturing & display solutions</h1>
-        <p>Outdoor advertising · Silkscreen printing · Carpentry works · Plastic molding · Metal fabrication — one-stop contractor.</p>
+        <p>Outdoor advertising · Silkscreen printing · Carpentry works · Plastic molding · Metal fabrication</p>
         <div class="btn-group">
-          <a href="#" class="btn-primary"><i class="fas fa-file-invoice"></i> Contact Us!</a>
+          <button class="btn-primary" id="openContactModalBtn"><i class="fas fa-address-card"></i> Contact Us!</button>
         </div>
       </div>
       <div class="hero-right">
         <div class="animated-logo">
-          <img src="assets/logo.png" alt="LN Display & Contractor Logo" class="logo-image" onerror="this.onerror=null; this.src='https://placehold.co/200x200/transparent?text=LN+Display'; this.style.background='transparent';">
+          <img src="assets/logo.png" alt="LN Display & Contractor Logo" class="logo-image" onerror="this.onerror=null; this.src='https://placehold.co/140x140/transparent?text=LN'; this.style.background='transparent';">
         </div>
       </div>
     </div>
@@ -505,225 +628,141 @@
   <!-- Services Section -->
   <div class="services-section">
     <div class="section-title">Core services</div>
-    <div class="section-sub">Integrated manufacturing solutions for retail, advertising, and industrial sectors</div>
+    <div class="section-sub">Integrated manufacturing solutions for retail & advertising</div>
     <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">🏙️</div>
-        <h3>Outdoor Advertising</h3>
-        <ul class="service-list-items">
-          <li>• Panaflex / Signages</li>
-          <li>• Van Billboard</li>
-          <li>• Sign Boards, Tire Cover</li>
-          <li>• Inkjet Printing</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🖨️</div>
-        <h3>Silkscreen Printing</h3>
-        <ul class="service-list-items">
-          <li>• Streamers / Banners / Buntings</li>
-          <li>• Price Tags / Name Tags</li>
-          <li>• Shelf Talkers / Menu Boards</li>
-          <li>• Stickers & Flanger Signs</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🪚</div>
-        <h3>Carpentry Works</h3>
-        <ul class="service-list-items">
-          <li>• Display Racks / Gondola</li>
-          <li>• Booths / Sampling Tables</li>
-          <li>• Wire/Acrylic Dispensers</li>
-          <li>• Fiberglass / Mobile Carts</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">⚙️</div>
-        <h3>Plastic & Machine Shop</h3>
-        <ul class="service-list-items">
-          <li>• Vacuum Forming</li>
-          <li>• Moulding Fabrication</li>
-          <li>• Acrylic Assembly</li>
-          <li>• Custom Plastic Components</li>
-        </ul>
-      </div>
+      <div class="service-card"><div class="service-icon">🏙️</div><h3>Outdoor Advertising</h3><ul class="service-list-items"><li>• Panaflex / Signages</li><li>• Van Billboard</li><li>• Sign Boards, Inkjet</li></ul></div>
+      <div class="service-card"><div class="service-icon">🖨️</div><h3>Silkscreen Printing</h3><ul class="service-list-items"><li>• Streamers / Banners</li><li>• Price Tags / Shelf Talkers</li><li>• Stickers & Flanger Signs</li></ul></div>
+      <div class="service-card"><div class="service-icon">🪚</div><h3>Carpentry Works</h3><ul class="service-list-items"><li>• Display Racks / Gondola</li><li>• Booths / Sampling Tables</li><li>• Wire/Acrylic Dispensers</li></ul></div>
+      <div class="service-card"><div class="service-icon">⚙️</div><h3>Plastic & Machine Shop</h3><ul class="service-list-items"><li>• Vacuum Forming</li><li>• Moulding Fabrication</li><li>• Acrylic Assembly</li></ul></div>
     </div>
   </div>
 
-  <!-- Product Gallery with Images from assets folder -->
+  <!-- Product Gallery -->
   <div class="gallery-section">
     <div class="section-title">Product showcase</div>
-    <div class="section-sub">Quality craftsmanship across displays, signage, and metal fabrications</div>
+    <div class="section-sub">Quality displays, signage, metal fabrication</div>
     <div class="gallery-grid">
-      <div class="gallery-item">
-        <div class="gallery-img">
-          <img src="assets/panaflex-signage.jpg" alt="Panaflex Signage" onerror="this.onerror=null; this.parentElement.style.background='linear-gradient(135deg, #eef2ff, #e0e8f0)'; this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-sign\' style=\'font-size: 2.5rem; opacity: 0.5; color:#115a6e;\'></i><span style=\'margin-left: 0.5rem; font-size:0.8rem;\'>Panaflex</span>'">
-        </div>
-        <div class="gallery-info">
-          <h4>Panaflex & Billboards</h4>
-          <p>Durable outdoor advertising with vibrant inkjet printing</p>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-img">
-          <img src="assets/display-rack.jpg" alt="Display Rack" onerror="this.onerror=null; this.parentElement.style.background='linear-gradient(135deg, #eef2ff, #e0e8f0)'; this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-shopping-cart\' style=\'font-size: 2.5rem; opacity: 0.5; color:#115a6e;\'></i><span style=\'margin-left: 0.5rem; font-size:0.8rem;\'>Display Rack</span>'">
-        </div>
-        <div class="gallery-info">
-          <h4>Custom Display Racks</h4>
-          <p>Gondola, wire dispenser, retail fixtures</p>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-img">
-          <img src="assets/silkscreen-banners.jpg" alt="Silkscreen Banners" onerror="this.onerror=null; this.parentElement.style.background='linear-gradient(135deg, #eef2ff, #e0e8f0)'; this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-print\' style=\'font-size: 2.5rem; opacity: 0.5; color:#115a6e;\'></i><span style=\'margin-left: 0.5rem; font-size:0.8rem;\'>Banners</span>'">
-        </div>
-        <div class="gallery-info">
-          <h4>Silkscreen Banners</h4>
-          <p>Streamers, buntings, promotional materials</p>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-img">
-          <img src="assets/metal-fabrication.jpg" alt="Metal Fabrication" onerror="this.onerror=null; this.parentElement.style.background='linear-gradient(135deg, #eef2ff, #e0e8f0)'; this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-industry\' style=\'font-size: 2.5rem; opacity: 0.5; color:#115a6e;\'></i><span style=\'margin-left: 0.5rem; font-size:0.8rem;\'>Metal Works</span>'">
-        </div>
-        <div class="gallery-info">
-          <h4>Structural Metal</h4>
-          <p>Welded frames, booths, enclosures, custom structures</p>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-img">
-          <img src="assets/acrylic-display.jpg" alt="Acrylic Display" onerror="this.onerror=null; this.parentElement.style.background='linear-gradient(135deg, #eef2ff, #e0e8f0)'; this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-gem\' style=\'font-size: 2.5rem; opacity: 0.5; color:#115a6e;\'></i><span style=\'margin-left: 0.5rem; font-size:0.8rem;\'>Acrylic</span>'">
-        </div>
-        <div class="gallery-info">
-          <h4>Acrylic Displays</h4>
-          <p>Custom acrylic fabrication, dispensers, signage</p>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-img">
-          <img src="assets/booth-fabrication.jpg" alt="Booth Fabrication" onerror="this.onerror=null; this.parentElement.style.background='linear-gradient(135deg, #eef2ff, #e0e8f0)'; this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-store\' style=\'font-size: 2.5rem; opacity: 0.5; color:#115a6e;\'></i><span style=\'margin-left: 0.5rem; font-size:0.8rem;\'>Booths</span>'">
-        </div>
-        <div class="gallery-info">
-          <h4>Trade Show Booths</h4>
-          <p>Custom booths, sampling tables, exhibition displays</p>
-        </div>
-      </div>
+      <div class="gallery-item"><div class="gallery-img"><img src="assets/panaflex-signage.jpg" alt="Panaflex" onerror="handleImageError(this)"></div><div class="gallery-info"><h4>Panaflex & Billboards</h4><p>Outdoor advertising</p></div></div>
+      <div class="gallery-item"><div class="gallery-img"><img src="assets/display-rack.jpg" alt="Racks" onerror="handleImageError(this)"></div><div class="gallery-info"><h4>Display Racks</h4><p>Gondola, wire fixtures</p></div></div>
+      <div class="gallery-item"><div class="gallery-img"><img src="assets/silkscreen-banners.jpg" alt="Banners" onerror="handleImageError(this)"></div><div class="gallery-info"><h4>Silkscreen Banners</h4><p>Streamers, buntings</p></div></div>
+      <div class="gallery-item"><div class="gallery-img"><img src="assets/metal-fabrication.jpg" alt="Metal" onerror="handleImageError(this)"></div><div class="gallery-info"><h4>Metal Fabrication</h4><p>Frames, booths, structures</p></div></div>
     </div>
   </div>
 
-  <!-- Equipment & Manpower Row -->
+  <!-- Equipment & Manpower Row Compact -->
   <div class="details-row">
-    <div class="equipment-box">
-      <div class="box-title"><i class="fas fa-microchip"></i> Major Equipment</div>
-      <div class="equip-tags">
-        <span class="equip-tag">Spot Welding (25)</span>
-        <span class="equip-tag">Straight Cutter (6)</span>
-        <span class="equip-tag">Wire Bender (6)</span>
-        <span class="equip-tag">Welding Machine (7)</span>
-        <span class="equip-tag">Grinder (7)</span>
-        <span class="equip-tag">EPSON Printers (3)</span>
-        <span class="equip-tag">HP LATEX Printer</span>
-        <span class="equip-tag">Acrylic Laser Cutter</span>
-        <span class="equip-tag">CNC Router</span>
-        <span class="equip-tag">Box Bender / Tube Bender</span>
-        <span class="equip-tag">Compressors (4)</span>
-        <span class="equip-tag">Laminator</span>
-      </div>
-    </div>
-    <div class="manpower-box">
-      <div class="box-title"><i class="fas fa-users"></i> Manpower</div>
-      <ul class="manpower-list">
-        <li><span>Daily Rate Workers</span><span>44 persons (incl. 2 mechanics, 1 electrician)</span></li>
-        <li><span>Packing Department</span><span>25</span></li>
-        <li><span>Carpentry Department</span><span>10</span></li>
-        <li><span>Metal Fabrication</span><span>30</span></li>
-        <li><span>Printing Department</span><span>5</span></li>
-        <li><span>Acrylic Assembly</span><span>25</span></li>
-        <li><span><strong>Total Piece Rate</strong></span><span><strong>95+</strong></span></li>
-      </ul>
-    </div>
+    <div class="equipment-box"><div class="box-title"><i class="fas fa-microchip"></i> Major Equipment</div><div class="equip-tags"><span class="equip-tag">Spot Welding (25)</span><span class="equip-tag">Wire Bender (6)</span><span class="equip-tag">Welding (7)</span><span class="equip-tag">EPSON Printers (3)</span><span class="equip-tag">HP LATEX</span><span class="equip-tag">Laser Cutter</span><span class="equip-tag">CNC Router</span><span class="equip-tag">Box Bender</span></div></div>
+    <div class="manpower-box"><div class="box-title"><i class="fas fa-users"></i> Manpower</div><ul class="manpower-list"><li><span>Daily Rate Workers</span><span>44</span></li><li><span>Packing Dept</span><span>25</span></li><li><span>Metal Fabrication</span><span>30</span></li><li><span>Acrylic Assembly</span><span>25</span></li><li><span><strong>Total</strong></span><span><strong>95+</strong></span></li></ul></div>
   </div>
 
-  <!-- Company Information Card -->
-  <div class="company-card">
-    <div class="company-grid">
-      <div class="company-item">
-        <h5>Registration</h5>
-        <p>SEC: CS201521895</p>
-        <p>Mayor's: 16-M0609-01074</p>
-        <p>TIN: 009-164-725-000</p>
-      </div>
-      <div class="company-item">
-        <h5>Address</h5>
-        <p>B4 L6 Apple Ville Subd.</p>
-        <p>Tullahan Road, Sta. Quiteria</p>
-        <p>Caloocan City, Philippines</p>
-      </div>
-      <div class="company-item">
-        <h5>Contact</h5>
-        <p>📞 8-2914500 (telefax)</p>
-        <p>✉️ ln_display@yahoo.com</p>
-        <p>✉️ ln_display24@gmail.com</p>
-      </div>
-      <div class="company-item">
-        <h5>Leadership</h5>
-        <p>Rolando Martinez - President</p>
-        <p>Adelaida Martinez - VP/Finance</p>
-        <p>M. Aguinaldo, A. Aguinaldo, J. Nolasco - BOD</p>
-      </div>
-      <div class="company-item">
-        <h5>Banking</h5>
-        <p>BDO Proj. 8 Shorthorn, QC</p>
-      </div>
-    </div>
-  </div>
+  <!-- Company Info Card Compact -->
+  <div class="company-card"><div class="company-grid"><div class="company-item"><h5>Registration</h5><p>SEC: CS201521895</p><p>TIN: 009-164-725-000</p></div><div class="company-item"><h5>Address</h5><p>B4 L6 Apple Ville Subd.</p><p>Tullahan Rd, Sta. Quiteria</p><p>Caloocan City</p></div><div class="company-item"><h5>Contact</h5><p>📞 8-2914500</p><p>✉️ ln_display24@gmail.com</p></div><div class="company-item"><h5>Leadership</h5><p>Rolando Martinez</p><p>Adelaida Martinez</p></div></div></div>
 
   <!-- Contact Bar -->
-  <div class="contact-bar">
-    <div class="badges">
-      <span><i class="fas fa-check-circle"></i> SEC Registered</span>
-      <span><i class="fas fa-check-circle"></i> BIR Compliant</span>
-      <span><i class="fas fa-check-circle"></i> PhilGEPS Accredited</span>
-      <span><i class="fas fa-check-circle"></i> PEZA</span>
-    </div>
-    <div><i class="fas fa-envelope"></i> ln_display24@gmail.com | <i class="fas fa-phone"></i> 8-2914500</div>
-  </div>
+  <div class="contact-bar"><div class="badges"><span><i class="fas fa-check-circle"></i> SEC Registered</span><span><i class="fas fa-check-circle"></i> BIR Compliant</span><span><i class="fas fa-check-circle"></i> PhilGEPS</span></div><div><i class="fas fa-envelope"></i> ln_display24@gmail.com | <i class="fas fa-phone"></i> 8-2914500</div></div>
 
   <!-- Footer -->
-  <div class="footer">
-    <div class="footer-col">
-      <p><strong>LN DISPLAY & CONTRACTOR SERVICE CORP.</strong></p>
-      <p>Outdoor Advertising · Silkscreen · Carpentry · Plastic Molding · Metal Fabrication</p>
-      <p>Wire Equipment · CNC Routing · Laser Cutting · Printing</p>
-    </div>
-    <div class="footer-col">
-      <p><a href="#">Request quotation</a></p>
-      <p><a href="#">Capability brochure</a></p>
-      <p><a href="#">Product catalog</a></p>
-    </div>
-    <div class="footer-col">
-      <p>📍 B4 L6 Apple Ville Subd., Tullahan Rd.</p>
-      <p>Sta. Quiteria, Caloocan City</p>
-      <p>📞 8-2914500 | ✉️ ln_display@yahoo.com</p>
-    </div>
-  </div>
-  <div class="copyright">
-    © 2025 LN DISPLAY & CONTRACTOR SERVICE CORP. | SEC: CS201521895 | All rights reserved
-  </div>
+  <div class="footer"><div class="footer-col"><p><strong>LN DISPLAY & CONTRACTOR</strong></p><p>Outdoor Advertising · Silkscreen · Carpentry · Metal Fabrication</p></div><div class="footer-col"><p><a href="#">Request quotation</a></p><p><a href="#">Capability brochure</a></p></div><div class="footer-col"><p>📍 B4 L6 Apple Ville Subd., Caloocan</p><p>📞 8-2914500 | ✉️ ln_display@yahoo.com</p></div></div>
+  <div class="copyright">© 2025 LN DISPLAY & CONTRACTOR SERVICE CORP. | SEC: CS201521895</div>
 </div>
 
-<!-- Simple script to handle image fallback styling -->
+<!-- COMPACT MODAL: PURE CONTACT INFO (NO FORM, SMALLER SIZE) -->
+<div id="contactModal" class="modal-overlay">
+  <div class="contact-modal">
+    <div class="modal-header">
+      <h3><i class="fas fa-headset"></i> Contact LN Display</h3>
+      <button class="close-modal" id="closeModalBtn">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="contact-info-container">
+        <div class="contact-card">
+          <div class="contact-title"><i class="fas fa-phone-alt"></i> <span>Telefax</span></div>
+          <div class="contact-detail">8-2914500</div>
+          <div class="contact-sub">Mon-Fri 8:00AM - 5:00PM</div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-title"><i class="fas fa-envelope"></i> <span>Email</span></div>
+          <div class="contact-detail">ln_display@yahoo.com</div>
+          <div class="contact-detail" style="margin-top: 2px;">ln_display24@gmail.com</div>
+          <div class="contact-sub">Inquiries & quotations</div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-title"><i class="fas fa-map-marker-alt"></i> <span>Workshop</span></div>
+          <div class="contact-detail">B4 L6 Apple Ville Subd., Tullahan Rd.</div>
+          <div class="contact-detail">Sta. Quiteria, Caloocan City</div>
+          <div class="contact-sub">Metro Manila, Philippines</div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-title"><i class="fas fa-building"></i> <span>Company IDs</span></div>
+          <div class="contact-detail">SEC: CS201521895 | TIN: 009-164-725-000</div>
+          <div class="contact-sub">PEZA · PhilGEPS Accredited</div>
+        </div>
+        <div class="office-hours-compact">
+          <i class="far fa-clock"></i> <strong>Business hours:</strong> Mon–Fri 8AM–5PM | Sat 9AM–12NN
+        </div>
+        <div class="action-buttons-compact">
+          <button class="copy-btn-sm" data-copy="8-2914500"><i class="fas fa-copy"></i> Phone</button>
+          <button class="copy-btn-sm" data-copy="ln_display24@gmail.com"><i class="fas fa-copy"></i> Email</button>
+          <button class="copy-btn-sm" data-copy="B4 L6 Apple Ville Subd., Tullahan Road, Sta. Quiteria, Caloocan City"><i class="fas fa-location-dot"></i> Address</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="copyToast" class="toast-msg">📋 Copied!</div>
+
 <script>
-  // Ensure images that fail to load show a nice placeholder
-  document.querySelectorAll('.gallery-img img').forEach(img => {
-    img.addEventListener('error', function() {
-      const parent = this.parentElement;
+  function handleImageError(imgElement) {
+    const parent = imgElement.parentElement;
+    if(parent && !parent.querySelector('.fallback-icon')) {
       parent.style.background = 'linear-gradient(135deg, #eef2ff, #e0e8f0)';
       parent.style.display = 'flex';
       parent.style.alignItems = 'center';
       parent.style.justifyContent = 'center';
-      parent.innerHTML = '<i class="fas fa-image" style="font-size: 2.5rem; opacity: 0.5; color:#115a6e;"></i><span style="margin-left: 0.5rem; font-size:0.8rem; color:#115a6e;">Product Image</span>';
+      parent.innerHTML = '<i class="fas fa-image" style="font-size: 1.8rem; opacity: 0.5; color:#115a6e;"></i>';
+    }
+  }
+  window.handleImageError = handleImageError;
+  document.querySelectorAll('.gallery-img img').forEach(img => {
+    img.addEventListener('error', function() { handleImageError(this); });
+  });
+
+  // Modal logic
+  const modal = document.getElementById('contactModal');
+  const openBtn = document.getElementById('openContactModalBtn');
+  const closeBtn = document.getElementById('closeModalBtn');
+
+  function openModal() { modal.classList.add('active'); document.body.style.overflow = 'hidden'; }
+  function closeModal() { modal.classList.remove('active'); document.body.style.overflow = ''; }
+
+  openBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => { if(e.target === modal) closeModal(); });
+
+  // Copy to clipboard toast
+  const toast = document.getElementById('copyToast');
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 1500);
+  }
+  document.querySelectorAll('.copy-btn-sm').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const copyText = btn.getAttribute('data-copy');
+      if(copyText) {
+        navigator.clipboard.writeText(copyText).then(() => {
+          showToast(`✓ Copied: ${copyText.length > 28 ? copyText.substring(0, 25)+'…' : copyText}`);
+        }).catch(() => {
+          const textarea = document.createElement('textarea');
+          textarea.value = copyText;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+          showToast("Copied!");
+        });
+      }
     });
   });
 </script>
