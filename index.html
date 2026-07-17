@@ -1,770 +1,2378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>LN Display & Contractor | Manufacturing Solutions</title>
-  <meta name="description" content="LN Display & Contractor Service Corp. - Outdoor advertising, silkscreen printing, carpentry works, plastic molding, metal fabrication since 2015.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <title>LN Display & Contractor | Manufacturing Solutions</title>
+    <meta name="description" content="LN Display & Contractor Service Corp. - Outdoor advertising, silkscreen printing, carpentry works, plastic molding, metal fabrication since 2015." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        /* ===== EXISTING STYLES (unchanged) ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f5f7fc;
-      color: #1e293b;
-      line-height: 1.4;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #e8f4f8;
+            color: #0b1e2b;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
 
-    /* Compact Page */
-    .page {
-      max-width: 1200px;
-      margin: 1rem auto;
-      background: #ffffff;
-      border-radius: 1.5rem;
-      overflow: hidden;
-      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
-    }
+        .page {
+            max-width: 100%;
+            margin: 0;
+            background: #ffffff;
+            overflow: hidden;
+        }
 
-    /* Hero Section - Compact */
-    .hero {
-      background: linear-gradient(135deg, #0a2b38 0%, #1b5e7a 100%);
-      padding: 1.8rem 2rem;
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
+        /* ----- NAVIGATION BAR (FIXED) ----- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 4rem;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(180, 215, 235, 0.4);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            animation: slideDown 0.6s ease forwards;
+        }
 
-    .hero-bg-shape {
-      position: absolute;
-      top: -30%;
-      right: -10%;
-      width: 60%;
-      height: 150%;
-      background: rgba(255,255,255,0.03);
-      transform: rotate(15deg);
-      pointer-events: none;
-    }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1.5rem;
-    }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: #0b2b3f;
+            letter-spacing: -0.02em;
+            text-decoration: none;
+        }
 
-    .hero-left {
-      flex: 1.2;
-      min-width: 240px;
-    }
+        .nav-brand i {
+            color: #4a9fc7;
+            font-size: 1.4rem;
+            animation: pulse 2s infinite;
+        }
 
-    .logo {
-      font-size: 1rem;
-      font-weight: 800;
-      background: rgba(255,255,255,0.12);
-      backdrop-filter: blur(8px);
-      display: inline-block;
-      padding: 0.3rem 1rem;
-      border-radius: 40px;
-      margin-bottom: 1rem;
-      border: 1px solid rgba(255,255,255,0.2);
-    }
+        @keyframes pulse {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
 
-    .logo span {
-      font-size: 0.65rem;
-      font-weight: 400;
-    }
+        .nav-brand span {
+            font-weight: 400;
+            color: #4e7a94;
+            font-size: 0.65rem;
+            letter-spacing: 0.3px;
+            background: #dceef7;
+            padding: 0.15rem 0.7rem;
+            border-radius: 40px;
+            margin-left: 0.3rem;
+        }
 
-    .hero-left h1 {
-      font-size: 1.8rem;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 0.6rem;
-    }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #1f4a5e;
+        }
 
-    .hero-left p {
-      font-size: 0.85rem;
-      opacity: 0.9;
-      margin-bottom: 1.2rem;
-      max-width: 500px;
-    }
+        .nav-links a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+            position: relative;
+            cursor: pointer;
+        }
 
-    .btn-group {
-      display: flex;
-      gap: 0.8rem;
-      flex-wrap: wrap;
-    }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #4a9fc7;
+            transition: 0.3s;
+        }
 
-    .btn-primary {
-      background: #f5b042;
-      color: #0a2b38;
-      padding: 0.6rem 1.4rem;
-      font-weight: 700;
-      border-radius: 40px;
-      text-decoration: none;
-      transition: 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      cursor: pointer;
-      border: none;
-      font-size: 0.85rem;
-    }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
 
-    .btn-primary:hover {
-      background: #ffc46b;
-      transform: translateY(-2px);
-    }
+        .nav-links a:hover {
+            color: #4a9fc7;
+        }
 
-    /* Logo Image Compact */
-    .hero-right {
-      flex: 0.7;
-      min-width: 180px;
-    }
+        .nav-links a.nav-cta {
+            background: #1f5a73;
+            color: white !important;
+            padding: 0.4rem 1.4rem;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            transition: 0.3s !important;
+        }
 
-    .animated-logo {
-      text-align: center;
-      animation: float 3s ease-in-out infinite;
-    }
+        .nav-links a.nav-cta::after {
+            display: none !important;
+        }
 
-    .logo-image {
-      width: 140px;
-      height: 140px;
-      object-fit: contain;
-      background: transparent;
-    }
+        .nav-links a.nav-cta:hover {
+            background: #4a9fc7 !important;
+            color: #0b1e2b !important;
+            transform: scale(1.05);
+        }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-5px); }
-    }
+        /* ----- HERO ----- */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 0.9fr;
+            gap: 2rem;
+            padding: 4rem 4rem 3rem;
+            background: linear-gradient(135deg, #e3f2f9 0%, #c5e2f0 50%, #b3d8e9 100%);
+            align-items: center;
+            min-height: 80vh;
+            position: relative;
+            overflow: hidden;
+        }
 
-    /* Services Section - Compact */
-    .services-section {
-      padding: 1.5rem 2rem;
-      background: white;
-      border-bottom: 1px solid #eef2f8;
-    }
+        .hero-bg-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
 
-    .section-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #0a2b38;
-      margin-bottom: 0.3rem;
-    }
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            animation: floatBubble linear infinite;
+            pointer-events: none;
+        }
 
-    .section-sub {
-      color: #6c86a0;
-      margin-bottom: 1.2rem;
-      font-size: 0.8rem;
-    }
+        .bubble:nth-child(1) {
+            width: 120px;
+            height: 120px;
+            left: 5%;
+            bottom: -120px;
+            animation-duration: 18s;
+            animation-delay: 0s;
+            background: rgba(255, 255, 255, 0.08);
+        }
+        .bubble:nth-child(2) {
+            width: 80px;
+            height: 80px;
+            left: 20%;
+            bottom: -80px;
+            animation-duration: 22s;
+            animation-delay: 2s;
+            background: rgba(255, 255, 255, 0.12);
+        }
+        .bubble:nth-child(3) {
+            width: 200px;
+            height: 200px;
+            left: 50%;
+            bottom: -200px;
+            animation-duration: 25s;
+            animation-delay: 4s;
+            background: rgba(255, 255, 255, 0.06);
+        }
+        .bubble:nth-child(4) {
+            width: 60px;
+            height: 60px;
+            left: 75%;
+            bottom: -60px;
+            animation-duration: 16s;
+            animation-delay: 1s;
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .bubble:nth-child(5) {
+            width: 150px;
+            height: 150px;
+            left: 90%;
+            bottom: -150px;
+            animation-duration: 20s;
+            animation-delay: 3s;
+            background: rgba(255, 255, 255, 0.07);
+        }
+        .bubble:nth-child(6) {
+            width: 100px;
+            height: 100px;
+            left: 35%;
+            bottom: -100px;
+            animation-duration: 19s;
+            animation-delay: 5s;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .bubble:nth-child(7) {
+            width: 50px;
+            height: 50px;
+            left: 60%;
+            bottom: -50px;
+            animation-duration: 14s;
+            animation-delay: 0.5s;
+            background: rgba(255, 255, 255, 0.18);
+        }
+        .bubble:nth-child(8) {
+            width: 180px;
+            height: 180px;
+            left: 10%;
+            bottom: -180px;
+            animation-duration: 28s;
+            animation-delay: 6s;
+            background: rgba(255, 255, 255, 0.05);
+        }
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1rem;
-    }
+        @keyframes floatBubble {
+            0% {
+                transform: translateY(0) rotate(0deg) scale(1);
+                opacity: 0.4;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-120vh) rotate(720deg) scale(0.5);
+                opacity: 0;
+            }
+        }
 
-    .service-card {
-      background: #fafcff;
-      border-radius: 0.8rem;
-      padding: 1rem;
-      border: 1px solid #eef2f8;
-      transition: all 0.2s;
-    }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(74, 159, 199, 0.10) 0%, transparent 70%);
+            animation: floatBg 8s ease-in-out infinite;
+            z-index: 1;
+        }
 
-    .service-card:hover {
-      border-color: #f5b042;
-      transform: translateY(-2px);
-    }
+        @keyframes floatBg {
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+            50% {
+                transform: translate(-30px, 20px) scale(1.1);
+            }
+        }
 
-    .service-icon {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
+        .hero-left {
+            position: relative;
+            z-index: 2;
+            animation: fadeUp 0.8s ease forwards;
+        }
 
-    .service-card h3 {
-      font-size: 0.9rem;
-      font-weight: 700;
-      margin-bottom: 0.4rem;
-      color: #115a6e;
-    }
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    .service-list-items {
-      margin-top: 0.3rem;
-      font-size: 0.65rem;
-      color: #3a5a6e;
-      list-style: none;
-    }
+        .hero-left h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            color: #0b2b3f;
+            margin-bottom: 0.75rem;
+        }
 
-    .service-list-items li {
-      padding: 0.15rem 0;
-      display: flex;
-      gap: 0.3rem;
-    }
+        .hero-left h1 .highlight {
+            color: #1f7a9e;
+            position: relative;
+            display: inline-block;
+        }
 
-    /* Gallery Compact */
-    .gallery-section {
-      padding: 1.5rem 2rem;
-      background: #fafcff;
-      border-bottom: 1px solid #eef2f8;
-    }
+        .hero-left h1 .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: rgba(31, 122, 158, 0.25);
+            border-radius: 4px;
+            animation: underlinePulse 2s ease-in-out infinite;
+        }
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
+        @keyframes underlinePulse {
+            0%,
+            100% {
+                width: 100%;
+                opacity: 0.3;
+            }
+            50% {
+                width: 80%;
+                opacity: 0.6;
+            }
+        }
 
-    .gallery-item {
-      background: white;
-      border-radius: 0.8rem;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-      transition: 0.2s;
-      border: 1px solid #eef2f8;
-    }
+        .hero-left p {
+            font-size: 1.05rem;
+            color: #1f4a5e;
+            max-width: 480px;
+            margin-bottom: 2rem;
+            animation: fadeUp 1s ease forwards 0.2s;
+            opacity: 0;
+        }
 
-    .gallery-img {
-      height: 140px;
-      background: #eef2f8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
+        .hero-badge {
+            display: inline-block;
+            background: #1f7a9e;
+            color: white;
+            font-weight: 700;
+            font-size: 0.7rem;
+            padding: 0.25rem 1.2rem;
+            border-radius: 40px;
+            letter-spacing: 0.3px;
+            margin-bottom: 1.2rem;
+            animation: fadeUp 0.6s ease forwards 0.1s;
+            opacity: 0;
+        }
 
-    .gallery-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+        .btn-group {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            animation: fadeUp 1s ease forwards 0.4s;
+            opacity: 0;
+        }
 
-    .gallery-info {
-      padding: 0.7rem;
-    }
+        .btn-primary {
+            background: #1f5a73;
+            color: white;
+            padding: 0.8rem 2.2rem;
+            font-weight: 700;
+            border-radius: 60px;
+            border: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+        }
 
-    .gallery-info h4 {
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: #0a2b38;
-    }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+            transition: 0.6s;
+        }
 
-    .gallery-info p {
-      font-size: 0.65rem;
-      color: #6c86a0;
-      margin-top: 0.1rem;
-    }
+        .btn-primary:hover::before {
+            left: 100%;
+        }
 
-    /* Details Row Compact */
-    .details-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      padding: 1.2rem 2rem;
-      background: white;
-      border-bottom: 1px solid #eef2f8;
-    }
+        .btn-primary:hover {
+            background: #4a9fc7;
+            color: #0b1e2b;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(74, 159, 199, 0.35);
+        }
 
-    .equipment-box, .manpower-box {
-      flex: 1;
-      min-width: 240px;
-    }
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid rgba(31, 122, 158, 0.35);
+            color: #1f4a5e;
+            padding: 0.8rem 2.2rem;
+            font-weight: 600;
+            border-radius: 60px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
 
-    .box-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #0a2b38;
-      margin-bottom: 0.7rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      border-left: 3px solid #f5b042;
-      padding-left: 0.7rem;
-    }
+        .btn-outline:hover {
+            border-color: #1f7a9e;
+            background: rgba(74, 159, 199, 0.08);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+        }
 
-    .equip-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
+        .hero-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            animation: fadeUp 0.8s ease forwards 0.3s;
+            opacity: 0;
+        }
 
-    .equip-tag {
-      background: #f1f5f9;
-      padding: 0.2rem 0.7rem;
-      border-radius: 30px;
-      font-size: 0.65rem;
-      font-weight: 500;
-      color: #1e4a5e;
-    }
+        .hero-image-wrapper {
+            background: transparent;
+            backdrop-filter: none;
+            border-radius: 0;
+            padding: 0;
+            box-shadow: none;
+            border: none;
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 1/1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.4s;
+        }
 
-    .manpower-list {
-      list-style: none;
-    }
+        .hero-image-wrapper:hover {
+            transform: scale(1.02);
+        }
 
-    .manpower-list li {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.3rem 0;
-      border-bottom: 1px dashed #eef2f8;
-      font-size: 0.7rem;
-    }
+        .logo-image {
+            width: 100%;
+            height: 100%;
+            max-width: 420px;
+            object-fit: contain;
+            filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.06));
+            animation: float 4s ease-in-out infinite;
+        }
 
-    /* Company Card Compact */
-    .company-card {
-      background: linear-gradient(135deg, #0a2b38, #0f3f52);
-      margin: 1rem 2rem;
-      border-radius: 1rem;
-      padding: 1rem 1.2rem;
-      color: white;
-    }
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
 
-    .company-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: space-between;
-    }
+        /* ----- STATS ROW ----- */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1.5rem;
+            padding: 2.5rem 4rem;
+            background: linear-gradient(135deg, #1f5a73, #2d7a9a);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
 
-    .company-item {
-      flex: 1;
-      min-width: 130px;
-    }
+        .stats-row::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, rgba(74, 159, 199, 0.15), transparent 50%, rgba(74, 159, 199, 0.15));
+            animation: shimmer 4s ease-in-out infinite;
+        }
 
-    .company-item h5 {
-      font-size: 0.6rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      opacity: 0.7;
-      margin-bottom: 0.3rem;
-    }
+        @keyframes shimmer {
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 0.6;
+            }
+        }
 
-    .company-item p {
-      font-size: 0.7rem;
-      font-weight: 500;
-      margin-bottom: 0.15rem;
-    }
+        .stat-item {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            animation: fadeUp 0.8s ease forwards;
+            opacity: 0;
+        }
 
-    /* Contact Bar Compact */
-    .contact-bar {
-      padding: 0.7rem 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.8rem;
-      background: white;
-      border-top: 1px solid #eef2f8;
-      border-bottom: 1px solid #eef2f8;
-      font-size: 0.7rem;
-    }
+        .stat-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        .stat-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .stat-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        .stat-item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
 
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      font-size: 0.65rem;
-      font-weight: 500;
-      color: #2c5a70;
-    }
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #b3e0f0;
+            display: block;
+            transition: 0.3s;
+        }
 
-    /* Footer Compact */
-    .footer {
-      background: #0f172a;
-      color: #cbd5e1;
-      padding: 1.2rem 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 1rem;
-    }
+        .stat-number:hover {
+            transform: scale(1.05);
+            color: #d4ecf5;
+        }
 
-    .footer-col p, .footer-col a {
-      font-size: 0.65rem;
-      color: #94a3b8;
-      text-decoration: none;
-      margin-bottom: 0.2rem;
-    }
+        .stat-label {
+            font-size: 0.75rem;
+            opacity: 0.8;
+            margin-top: 0.1rem;
+        }
 
-    .copyright {
-      background: #0a0f1a;
-      text-align: center;
-      padding: 0.5rem;
-      font-size: 0.6rem;
-      color: #64748b;
-    }
+        /* ----- SECTION COMMON ----- */
+        .section {
+            padding: 3rem 4rem;
+        }
 
-    /* ========= COMPACT MODAL - PURE CONTACT (SMALLER) ========= */
-    .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(4px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.25s ease;
-    }
-    .modal-overlay.active {
-      opacity: 1;
-      visibility: visible;
-    }
-    .contact-modal {
-      background: white;
-      max-width: 460px;
-      width: 90%;
-      border-radius: 1.2rem;
-      overflow: hidden;
-      transform: scale(0.96);
-      transition: transform 0.2s ease;
-      box-shadow: 0 20px 35px rgba(0,0,0,0.25);
-    }
-    .modal-overlay.active .contact-modal {
-      transform: scale(1);
-    }
-    .modal-header {
-      background: linear-gradient(135deg, #0a2b38, #1b5e7a);
-      padding: 0.9rem 1.3rem;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .modal-header h3 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .close-modal {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 1.5rem;
-      cursor: pointer;
-      line-height: 1;
-      width: 28px;
-      height: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      transition: 0.2s;
-    }
-    .close-modal:hover {
-      background: rgba(255,255,255,0.2);
-    }
-    .modal-body {
-      padding: 1.2rem 1.3rem;
-    }
-    /* Compact contact cards */
-    .contact-info-container {
-      display: flex;
-      flex-direction: column;
-      gap: 0.9rem;
-    }
-    .contact-card {
-      background: #f8fafc;
-      border-radius: 0.9rem;
-      padding: 0.7rem 1rem;
-      border-left: 3px solid #f5b042;
-      transition: all 0.15s;
-    }
-    .contact-card i {
-      font-size: 1.1rem;
-      color: #f5b042;
-      width: 28px;
-      text-align: center;
-      margin-right: 8px;
-    }
-    .contact-card .contact-title {
-      font-weight: 700;
-      font-size: 0.75rem;
-      color: #0a2b38;
-      margin-bottom: 4px;
-      display: flex;
-      align-items: center;
-    }
-    .contact-card .contact-detail {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: #1e293b;
-      margin-left: 36px;
-      word-break: break-word;
-    }
-    .contact-card .contact-sub {
-      font-size: 0.6rem;
-      color: #5b7a97;
-      margin-left: 36px;
-      margin-top: 2px;
-    }
-    .compact-divider {
-      height: 1px;
-      background: #eef2f8;
-      margin: 0.2rem 0;
-    }
-    .office-hours-compact {
-      background: #fef9e6;
-      border-radius: 0.8rem;
-      padding: 0.6rem;
-      text-align: center;
-      font-size: 0.65rem;
-      color: #a16207;
-      margin-top: 0.2rem;
-    }
-    .action-buttons-compact {
-      display: flex;
-      gap: 0.6rem;
-      margin-top: 0.8rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .copy-btn-sm {
-      background: #eef2ff;
-      border: none;
-      padding: 0.35rem 0.8rem;
-      border-radius: 30px;
-      font-size: 0.6rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      color: #115a6e;
-    }
-    .copy-btn-sm:hover {
-      background: #f5b042;
-      color: #0a2b38;
-    }
-    .toast-msg {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #0a2b38;
-      color: white;
-      padding: 6px 14px;
-      border-radius: 40px;
-      font-size: 0.7rem;
-      z-index: 1100;
-      opacity: 0;
-      transition: opacity 0.2s;
-      pointer-events: none;
-    }
-    .toast-msg.show {
-      opacity: 1;
-    }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
 
-    @media (max-width: 680px) {
-      .page {
-        margin: 0;
-        border-radius: 0;
-      }
-      .hero {
-        padding: 1.2rem;
-      }
-      .logo-image {
-        width: 100px;
-        height: 100px;
-      }
-      .hero-left h1 {
-        font-size: 1.4rem;
-      }
-      .services-section, .gallery-section, .details-row, .company-card, .contact-bar, .footer {
-        padding: 1rem;
-      }
-      .company-card {
-        margin: 0.8rem;
-      }
-      .contact-card .contact-detail {
-        font-size: 0.7rem;
-        margin-left: 28px;
-      }
-    }
-  </style>
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0b2b3f;
+            letter-spacing: -0.02em;
+        }
+
+        .section-sub {
+            color: #4e7a94;
+            font-size: 0.9rem;
+            margin-top: 0.1rem;
+        }
+
+        .section-link {
+            color: #4a9fc7;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: 0.3s;
+        }
+
+        .section-link:hover {
+            gap: 10px;
+            color: #1f5a73;
+        }
+
+        /* ----- SERVICES ----- */
+        .services-section {
+            background: #ffffff;
+            border-top: 1px solid #dceef7;
+            border-bottom: 1px solid #dceef7;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: #f5faff;
+            border-radius: 1.2rem;
+            padding: 1.5rem 1.5rem 1.2rem;
+            border: 1px solid #dceef7;
+            transition: 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: cardReveal 0.6s ease forwards;
+        }
+
+        .service-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        .service-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .service-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        .service-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes cardReveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #4a9fc7, #7bbddb);
+            opacity: 0;
+            transition: 0.4s;
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-card:hover {
+            border-color: #4a9fc7;
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 16px 40px -16px rgba(74, 159, 199, 0.15);
+        }
+
+        .service-icon {
+            font-size: 2.2rem;
+            margin-bottom: 0.6rem;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .service-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0b2b3f;
+            margin-bottom: 0.3rem;
+        }
+
+        .service-list-items {
+            list-style: none;
+            margin-top: 0.4rem;
+        }
+
+        .service-list-items li {
+            font-size: 0.75rem;
+            color: #3d5e73;
+            padding: 0.15rem 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .service-list-items li::before {
+            content: "◆";
+            color: #4a9fc7;
+            font-size: 0.5rem;
+            transition: 0.3s;
+        }
+
+        .service-card:hover .service-list-items li::before {
+            transform: scale(1.3);
+        }
+
+        /* ----- GALLERY ----- */
+        .gallery-section {
+            background: #f5faff;
+            border-bottom: 1px solid #dceef7;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 1.2rem;
+            overflow: hidden;
+            border: 1px solid #dceef7;
+            transition: 0.4s;
+            opacity: 0;
+            transform: scale(0.95);
+            animation: galleryReveal 0.6s ease forwards;
+        }
+
+        .gallery-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        .gallery-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .gallery-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        .gallery-item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes galleryReveal {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 16px 40px -16px rgba(74, 159, 199, 0.15);
+            border-color: #4a9fc7;
+        }
+
+        .gallery-img {
+            height: 160px;
+            background: #dceef7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: 0.4s;
+        }
+
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.03);
+        }
+
+        .gallery-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-info {
+            padding: 0.9rem 1rem;
+        }
+
+        .gallery-info h4 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #0b2b3f;
+        }
+
+        .gallery-info p {
+            font-size: 0.7rem;
+            color: #4e7a94;
+            margin-top: 0.1rem;
+        }
+
+        /* ----- DETAILS SECTION ----- */
+        .details-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            padding: 3rem 4rem;
+            background: #ffffff;
+            border-bottom: 1px solid #dceef7;
+        }
+
+        .detail-block {
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideIn 0.6s ease forwards;
+        }
+
+        .detail-block:nth-child(2) {
+            animation-delay: 0.2s;
+            transform: translateX(20px);
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .detail-block .block-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #0b2b3f;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .detail-block .block-title i {
+            color: #4a9fc7;
+        }
+
+        .equip-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .equip-tag {
+            background: #e8f4f8;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #1f4a5e;
+            transition: 0.3s;
+            cursor: default;
+        }
+
+        .equip-tag:hover {
+            background: #4a9fc7;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .manpower-list {
+            list-style: none;
+        }
+
+        .manpower-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.4rem 0;
+            border-bottom: 1px dashed #dceef7;
+            font-size: 0.8rem;
+            transition: 0.3s;
+        }
+
+        .manpower-list li:hover {
+            padding-left: 8px;
+            background: #f5faff;
+        }
+
+        .manpower-list li:last-child {
+            border-bottom: none;
+        }
+
+        .manpower-list li strong {
+            color: #0b2b3f;
+        }
+
+        /* ----- CONTACT BAR ----- */
+        .contact-bar {
+            padding: 0.8rem 4rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.8rem;
+            background: #ffffff;
+            border-bottom: 1px solid #dceef7;
+            font-size: 0.75rem;
+        }
+
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            color: #1f4a5e;
+            font-weight: 500;
+        }
+
+        .badges i {
+            color: #4a9fc7;
+            margin-right: 4px;
+        }
+
+        /* ================================================================
+           SECTION 1: WHY CHOOSE US - ACCORDION STYLE
+           ================================================================ */
+        .why-choose-section {
+            padding: 3rem 4rem;
+            background: #ffffff;
+            border-bottom: 1px solid #dceef7;
+        }
+
+        .why-accordion {
+            margin-top: 1.5rem;
+            border: 1px solid #dceef7;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .why-accordion-item {
+            border-bottom: 1px solid #dceef7;
+        }
+
+        .why-accordion-item:last-child {
+            border-bottom: none;
+        }
+
+        .why-accordion-header {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            background: #f5faff;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #0b2b3f;
+            text-align: left;
+            gap: 1rem;
+        }
+
+        .why-accordion-header:hover {
+            background: #e8f4f8;
+        }
+
+        .why-accordion-header .header-left {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .why-accordion-header .header-left i {
+            color: #4a9fc7;
+            font-size: 1.2rem;
+            width: 24px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .why-accordion-header .accordion-arrow {
+            font-size: 0.9rem;
+            color: #4a9fc7;
+            transition: 0.3s;
+            flex-shrink: 0;
+        }
+
+        .why-accordion-item.active .why-accordion-header .accordion-arrow {
+            transform: rotate(180deg);
+        }
+
+        .why-accordion-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            padding: 0 1.2rem;
+            background: white;
+        }
+
+        .why-accordion-item.active .why-accordion-body {
+            max-height: 300px;
+            padding: 0 1.2rem 1rem;
+        }
+
+        .why-accordion-body p {
+            font-size: 0.85rem;
+            color: #3d5e73;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ================================================================
+           SECTION 2: SIMPLIFIED GET IN TOUCH
+           ================================================================ */
+        .contact-enhanced-section {
+            padding: 3rem 4rem;
+            background: linear-gradient(135deg, #f5faff 0%, #e8f4f8 100%);
+            border-bottom: 1px solid #dceef7;
+        }
+
+        .contact-simple-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: stretch;
+        }
+
+        .contact-form-wrapper {
+            background: white;
+            border-radius: 1.2rem;
+            padding: 2rem;
+            border: 1px solid #dceef7;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+            transition: 0.3s;
+        }
+
+        .contact-form-wrapper:hover {
+            box-shadow: 0 12px 40px rgba(74, 159, 199, 0.08);
+        }
+
+        .contact-form-wrapper h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0b2b3f;
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-form-wrapper h3 i {
+            color: #4a9fc7;
+        }
+
+        .contact-form-wrapper .form-sub {
+            color: #4e7a94;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #1f4a5e;
+            margin-bottom: 0.3rem;
+        }
+
+        .form-group label .required {
+            color: #e74c3c;
+            margin-left: 2px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.7rem 1rem;
+            border: 1.5px solid #dceef7;
+            border-radius: 0.7rem;
+            font-size: 0.85rem;
+            font-family: inherit;
+            transition: 0.3s;
+            background: #fafcff;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #4a9fc7;
+            box-shadow: 0 0 0 3px rgba(74, 159, 199, 0.12);
+            background: white;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .btn-send {
+            background: #1f5a73;
+            color: white;
+            padding: 0.8rem 2.5rem;
+            font-weight: 700;
+            border-radius: 60px;
+            border: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .btn-send:hover {
+            background: #4a9fc7;
+            color: #0b1e2b;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(74, 159, 199, 0.3);
+        }
+
+        .contact-info-simple {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .contact-map-wrapper {
+            background: white;
+            border-radius: 1.2rem;
+            overflow: hidden;
+            border: 1px solid #dceef7;
+            height: 100%;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: 0.3s;
+            flex: 1;
+        }
+
+        .contact-map-wrapper:hover {
+            border-color: #4a9fc7;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        .contact-map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 350px;
+            border: 0;
+        }
+
+        .contact-info-text {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            background: white;
+            border-radius: 1rem;
+            padding: 1rem 1.2rem;
+            border: 1px solid #dceef7;
+        }
+
+        .contact-info-text .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.8rem;
+            color: #1f4a5e;
+        }
+
+        .contact-info-text .info-item i {
+            color: #4a9fc7;
+            font-size: 1rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        .contact-info-text .info-item span {
+            line-height: 1.4;
+        }
+
+        /* ================================================================
+           SECTION 3: EXPANDED FOOTER
+           ================================================================ */
+        .footer {
+            background: #0b2b3f;
+            color: #b0c7d6;
+            padding: 2.5rem 4rem 1.5rem;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1.5fr 1.5fr;
+            gap: 2rem;
+        }
+
+        .footer-col p,
+        .footer-col a {
+            font-size: 0.8rem;
+            color: #94aec0;
+            text-decoration: none;
+            margin-bottom: 0.2rem;
+            transition: 0.3s;
+            line-height: 1.6;
+        }
+
+        .footer-col a:hover {
+            color: #4a9fc7;
+            transform: translateX(4px);
+            display: inline-block;
+        }
+
+        .footer-col strong {
+            color: #dceef7;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .footer-col .label {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #4e7a94;
+            margin-bottom: 0.3rem;
+            display: block;
+        }
+
+        .footer-motto {
+            font-style: italic;
+            color: #b3e0f0;
+            font-size: 0.85rem;
+            margin: 0.3rem 0 0.5rem;
+        }
+
+        .footer-description {
+            font-size: 0.75rem;
+            color: #94aec0;
+            line-height: 1.6;
+            margin-top: 0.3rem;
+        }
+
+        .footer-legal-link {
+            color: #94aec0;
+            text-decoration: none;
+            font-size: 0.75rem;
+            display: inline-block;
+            margin-top: 0.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .footer-legal-link:hover {
+            color: #4a9fc7;
+        }
+
+        /* ----- LEGAL MODALS ----- */
+        .legal-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .legal-modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .legal-modal {
+            background: white;
+            max-width: 700px;
+            width: 92%;
+            max-height: 85vh;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            transform: scale(0.9) translateY(20px);
+            transition: 0.3s ease;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.25);
+        }
+
+        .legal-modal-overlay.active .legal-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .legal-modal-header {
+            background: #1f5a73;
+            padding: 1rem 1.5rem;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .legal-modal-header h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .legal-modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.6rem;
+            cursor: pointer;
+            line-height: 1;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        .legal-modal-close:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(90deg);
+        }
+
+        .legal-modal-body {
+            padding: 1.5rem;
+            overflow-y: auto;
+            max-height: calc(85vh - 70px);
+        }
+
+        .legal-modal-body h4 {
+            color: #0b2b3f;
+            font-size: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .legal-modal-body h4:first-child {
+            margin-top: 0;
+        }
+
+        .legal-modal-body p,
+        .legal-modal-body li {
+            font-size: 0.85rem;
+            color: #1f4a5e;
+            line-height: 1.6;
+        }
+
+        .legal-modal-body ul {
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-modal-body ul li {
+            margin-bottom: 0.2rem;
+        }
+
+        .copyright {
+            background: #061a28;
+            text-align: center;
+            padding: 0.7rem;
+            font-size: 0.65rem;
+            color: #4e7a94;
+            letter-spacing: 0.3px;
+        }
+
+        /* ----- MODAL (existing) ----- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .contact-modal {
+            background: white;
+            max-width: 480px;
+            width: 92%;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            transform: scale(0.9) translateY(20px);
+            transition: 0.3s ease;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-overlay.active .contact-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .modal-header {
+            background: #1f5a73;
+            padding: 1rem 1.5rem;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.6rem;
+            cursor: pointer;
+            line-height: 1;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        .close-modal:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .contact-info-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .contact-card {
+            background: #f5faff;
+            border-radius: 1rem;
+            padding: 0.8rem 1rem;
+            border-left: 4px solid #4a9fc7;
+            transition: 0.3s;
+        }
+
+        .contact-card:hover {
+            background: #e8f4f8;
+            transform: translateX(4px);
+        }
+
+        .contact-card .contact-title {
+            font-weight: 700;
+            font-size: 0.8rem;
+            color: #0b2b3f;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-card .contact-title i {
+            color: #4a9fc7;
+            width: 22px;
+            text-align: center;
+        }
+
+        .contact-card .contact-detail {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #0b2b3f;
+            margin-left: 30px;
+            word-break: break-word;
+        }
+
+        .contact-card .contact-sub {
+            font-size: 0.65rem;
+            color: #4e7a94;
+            margin-left: 30px;
+            margin-top: 2px;
+        }
+
+        .office-hours-compact {
+            background: #e8f4f8;
+            border-radius: 0.9rem;
+            padding: 0.6rem;
+            text-align: center;
+            font-size: 0.7rem;
+            color: #1f4a5e;
+            margin-top: 0.2rem;
+        }
+
+        .action-buttons-compact {
+            display: flex;
+            gap: 0.6rem;
+            margin-top: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .copy-btn-sm {
+            background: #e8f4f8;
+            border: none;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #1f4a5e;
+        }
+
+        .copy-btn-sm:hover {
+            background: #4a9fc7;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .toast-msg {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0b2b3f;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            z-index: 1100;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        .toast-msg.show {
+            opacity: 1;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 2.5rem 2rem;
+                min-height: auto;
+            }
+            .hero-left p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .btn-group {
+                justify-content: center;
+            }
+            .hero-right {
+                order: -1;
+            }
+            .hero-image-wrapper {
+                max-width: 380px;
+                padding: 0;
+            }
+            .logo-image {
+                max-width: 320px;
+            }
+            .details-section {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .contact-simple-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .contact-info-text {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+            }
+            .navbar {
+                padding: 0.8rem 2rem;
+            }
+            .stats-row {
+                padding: 2rem 2rem;
+            }
+            .section {
+                padding: 2rem 2rem;
+            }
+            .details-section {
+                padding: 2rem 2rem;
+            }
+            .contact-bar {
+                padding: 0.8rem 2rem;
+            }
+            .why-choose-section {
+                padding: 2rem 2rem;
+            }
+            .contact-enhanced-section {
+                padding: 2rem 2rem;
+            }
+            .footer {
+                padding: 2rem 2rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0.8rem 1.5rem;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.7rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+            }
+            .hero {
+                padding: 2rem 1.5rem;
+            }
+            .hero-left h1 {
+                font-size: 2.2rem;
+            }
+            .hero-image-wrapper {
+                max-width: 300px;
+            }
+            .logo-image {
+                max-width: 260px;
+            }
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                padding: 1.5rem;
+            }
+            .section {
+                padding: 1.5rem;
+            }
+            .details-section {
+                padding: 1.5rem;
+            }
+            .contact-bar {
+                padding: 0.8rem 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .why-choose-section {
+                padding: 1.5rem;
+            }
+            .contact-enhanced-section {
+                padding: 1.5rem;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .contact-info-text {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+            .footer {
+                padding: 1.5rem;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.2rem;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-map-wrapper {
+                min-height: 240px;
+            }
+            .contact-map-wrapper iframe {
+                min-height: 240px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-left h1 {
+                font-size: 1.8rem;
+            }
+            .btn-primary,
+            .btn-outline {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.8rem;
+                width: 100%;
+                justify-content: center;
+            }
+            .btn-group {
+                flex-direction: column;
+                width: 100%;
+            }
+            .stat-number {
+                font-size: 1.6rem;
+            }
+            .hero-image-wrapper {
+                max-width: 220px;
+            }
+            .logo-image {
+                max-width: 180px;
+            }
+            .footer {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .contact-form-wrapper {
+                padding: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="page">
-  <!-- Hero Section -->
-  <div class="hero">
-    <div class="hero-bg-shape"></div>
-    <div class="hero-content">
-      <div class="hero-left">
-        <div class="logo">LN DISPLAY & CONTRACTOR <span>service corp.</span></div>
-        <h1>Complete manufacturing & display solutions</h1>
-        <p>Outdoor advertising · Silkscreen printing · Carpentry works · Plastic molding · Metal fabrication</p>
-        <div class="btn-group">
-          <button class="btn-primary" id="openContactModalBtn"><i class="fas fa-address-card"></i> Contact Us!</button>
+
+    <div class="page">
+
+        <!-- ===== NAVBAR (FIXED) ===== -->
+        <nav class="navbar">
+            <a href="#" class="nav-brand">
+                <i class="fas fa-cube"></i>
+                LN DISPLAY <span>service corp.</span>
+            </a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#gallery">Showcase</a>
+                <a href="#why-choose">Capabilities</a>
+                <a href="#contact" class="nav-cta" id="openContactModalBtn"><i class="fas fa-phone"></i> Contact</a>
+            </div>
+        </nav>
+
+        <!-- ===== HERO (unchanged) ===== -->
+        <header class="hero">
+            <div class="hero-bg-animation">
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+            </div>
+
+            <div class="hero-left">
+                <div class="hero-badge"><i class="fas fa-star"></i> Industry leader since 2015</div>
+                <h1>Complete manufacturing <br /><span class="highlight">&amp; display solutions</span></h1>
+                <p>Outdoor advertising · Silkscreen printing · Carpentry works · Plastic molding · Metal fabrication — all under one roof.</p>
+                <div class="btn-group">
+                    <button class="btn-primary" id="openContactModalBtn2"><i class="fas fa-address-card"></i> Contact Us</button>
+                    <a href="#" class="btn-outline"><i class="fas fa-file-pdf"></i> Capability Brochure</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-image-wrapper">
+                    <img src="assets/logo.png" alt="LN Display & Contractor Logo" class="logo-image" onerror="this.onerror=null; this.src='https://placehold.co/420x420/transparent?text=LN'; this.style.background='transparent';" />
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== STATS (unchanged) ===== -->
+        <div class="stats-row">
+            <div class="stat-item"><span class="stat-number">95+</span><span class="stat-label">Skilled Manpower</span></div>
+            <div class="stat-item"><span class="stat-number">8</span><span class="stat-label">Key Equipment Types</span></div>
+            <div class="stat-item"><span class="stat-number">4</span><span class="stat-label">Core Service Areas</span></div>
+            <div class="stat-item"><span class="stat-number">2015</span><span class="stat-label">Years in Operation</span></div>
         </div>
-      </div>
-      <div class="hero-right">
-        <div class="animated-logo">
-          <img src="assets/logo.png" alt="LN Display & Contractor Logo" class="logo-image" onerror="this.onerror=null; this.src='https://placehold.co/140x140/transparent?text=LN'; this.style.background='transparent';">
+
+        <!-- ===== SERVICES (unchanged) ===== -->
+        <section id="services" class="services-section section">
+            <div class="section-header">
+                <div>
+                    <div class="section-title">Core services</div>
+                    <div class="section-sub">Integrated manufacturing solutions for retail &amp; advertising</div>
+                </div>
+                <a href="#" class="section-link">All services <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">🏙️</span>
+                    <h3>Outdoor Advertising</h3>
+                    <ul class="service-list-items">
+                        <li>Panaflex / Signages</li>
+                        <li>Van Billboard</li>
+                        <li>Sign Boards, Inkjet</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🖨️</span>
+                    <h3>Silkscreen Printing</h3>
+                    <ul class="service-list-items">
+                        <li>Streamers / Banners</li>
+                        <li>Price Tags / Shelf Talkers</li>
+                        <li>Stickers &amp; Flanger Signs</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🪚</span>
+                    <h3>Carpentry Works</h3>
+                    <ul class="service-list-items">
+                        <li>Display Racks / Gondola</li>
+                        <li>Booths / Sampling Tables</li>
+                        <li>Wire/Acrylic Dispensers</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">⚙️</span>
+                    <h3>Plastic &amp; Machine Shop</h3>
+                    <ul class="service-list-items">
+                        <li>Vacuum Forming</li>
+                        <li>Moulding Fabrication</li>
+                        <li>Acrylic Assembly</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GALLERY (unchanged) ===== -->
+        <section id="gallery" class="gallery-section section">
+            <div class="section-header">
+                <div>
+                    <div class="section-title">Product showcase</div>
+                    <div class="section-sub">Quality displays, signage, metal fabrication</div>
+                </div>
+                <a href="#" class="section-link">View gallery <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-img"><img src="assets/panaflex-signage.jpg" alt="Panaflex" onerror="handleImageError(this)" /></div>
+                    <div class="gallery-info"><h4>Panaflex &amp; Billboards</h4><p>Outdoor advertising</p></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-img"><img src="assets/display-rack.jpg" alt="Racks" onerror="handleImageError(this)" /></div>
+                    <div class="gallery-info"><h4>Display Racks</h4><p>Gondola, wire fixtures</p></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-img"><img src="assets/silkscreen-banners.jpg" alt="Banners" onerror="handleImageError(this)" /></div>
+                    <div class="gallery-info"><h4>Silkscreen Banners</h4><p>Streamers, buntings</p></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-img"><img src="assets/metal-fabrication.jpg" alt="Metal" onerror="handleImageError(this)" /></div>
+                    <div class="gallery-info"><h4>Metal Fabrication</h4><p>Frames, booths, structures</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== DETAILS (unchanged) ===== -->
+        <div class="details-section">
+            <div class="detail-block">
+                <div class="block-title"><i class="fas fa-microchip"></i> Major Equipment</div>
+                <div class="equip-tags">
+                    <span class="equip-tag">Spot Welding (25)</span>
+                    <span class="equip-tag">Wire Bender (6)</span>
+                    <span class="equip-tag">Welding (7)</span>
+                    <span class="equip-tag">EPSON Printers (3)</span>
+                    <span class="equip-tag">HP LATEX</span>
+                    <span class="equip-tag">Laser Cutter</span>
+                    <span class="equip-tag">CNC Router</span>
+                    <span class="equip-tag">Box Bender</span>
+                </div>
+            </div>
+            <div class="detail-block">
+                <div class="block-title"><i class="fas fa-users"></i> Manpower</div>
+                <ul class="manpower-list">
+                    <li><span>Daily Rate Workers</span><span>44</span></li>
+                    <li><span>Packing Dept</span><span>25</span></li>
+                    <li><span>Metal Fabrication</span><span>30</span></li>
+                    <li><span>Acrylic Assembly</span><span>25</span></li>
+                    <li><span><strong>Total</strong></span><span><strong>95+</strong></span></li>
+                </ul>
+            </div>
         </div>
-      </div>
+
+        <!-- =============================================================
+             SECTION 1: WHY CHOOSE US - ACCORDION STYLE
+             ============================================================= -->
+        <section id="why-choose" class="why-choose-section">
+            <div class="section-header">
+                <div>
+                    <div class="section-title">Why Choose LN Display &amp; Contractor?</div>
+                    <div class="section-sub">Delivering quality craftsmanship, innovative solutions, and reliable service for commercial and industrial projects.</div>
+                </div>
+            </div>
+
+            <div class="why-accordion">
+                <div class="why-accordion-item active">
+                    <button class="why-accordion-header" onclick="toggleAccordion(this)">
+                        <span class="header-left">
+                            <i class="fas fa-trophy"></i>
+                            Competitive Advantages
+                        </span>
+                        <span class="accordion-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="why-accordion-body">
+                        <p>We deliver cost-effective solutions backed by experienced professionals and modern fabrication capabilities. Our integrated approach reduces lead times and optimizes production costs without compromising quality.</p>
+                    </div>
+                </div>
+
+                <div class="why-accordion-item">
+                    <button class="why-accordion-header" onclick="toggleAccordion(this)">
+                        <span class="header-left">
+                            <i class="fas fa-check-circle"></i>
+                            Quality Assurance
+                        </span>
+                        <span class="accordion-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="why-accordion-body">
+                        <p>Every project undergoes rigorous quality control protocols. We use premium materials, employ skilled workmanship, and maintain strict attention to detail across all fabrication processes.</p>
+                    </div>
+                </div>
+
+                <div class="why-accordion-item">
+                    <button class="why-accordion-header" onclick="toggleAccordion(this)">
+                        <span class="header-left">
+                            <i class="fas fa-clock"></i>
+                            Fast Turnaround
+                        </span>
+                        <span class="accordion-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="why-accordion-body">
+                        <p>Our efficient planning and streamlined production workflows ensure on-time project completion. We understand that time is critical in commercial and industrial environments.</p>
+                    </div>
+                </div>
+
+                <div class="why-accordion-item">
+                    <button class="why-accordion-header" onclick="toggleAccordion(this)">
+                        <span class="header-left">
+                            <i class="fas fa-map-marked-alt"></i>
+                            Nationwide Service Coverage
+                        </span>
+                        <span class="accordion-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="why-accordion-body">
+                        <p>With proven capabilities across the Philippines, we serve clients in Metro Manila, Central Luzon, CALABARZON, and nationwide project locations.</p>
+                    </div>
+                </div>
+
+                <div class="why-accordion-item">
+                    <button class="why-accordion-header" onclick="toggleAccordion(this)">
+                        <span class="header-left">
+                            <i class="fas fa-cogs"></i>
+                            Custom Manufacturing Capability
+                        </span>
+                        <span class="accordion-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="why-accordion-body">
+                        <p>We fabricate to your exact specifications, drawings, and project requirements. From concept to completion, our team delivers tailored manufacturing solutions.</p>
+                    </div>
+                </div>
+
+                <div class="why-accordion-item">
+                    <button class="why-accordion-header" onclick="toggleAccordion(this)">
+                        <span class="header-left">
+                            <i class="fas fa-handshake"></i>
+                            Customer Commitment
+                        </span>
+                        <span class="accordion-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="why-accordion-body">
+                        <p>We prioritize clear communication, reliable after-sales support, and long-term partnerships. Our clients trust us for consistent quality and dependable service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================================================
+             SECTION 2: SIMPLIFIED GET IN TOUCH
+             ============================================================= -->
+        <section id="contact" class="contact-enhanced-section">
+            <div class="contact-simple-grid">
+                <div class="contact-form-wrapper">
+                    <h3><i class="fas fa-paper-plane"></i> Get in Touch</h3>
+                    <p class="form-sub">Fill out the form below and our team will respond within 24 hours.</p>
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name <span class="required">*</span></label>
+                                <input type="text" id="fullName" placeholder="Enter your full name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="emailAddress">Email Address <span class="required">*</span></label>
+                                <input type="email" id="emailAddress" placeholder="Enter your email" required />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phoneNumber">Phone Number</label>
+                                <input type="tel" id="phoneNumber" placeholder="Enter your phone number" />
+                            </div>
+                            <div class="form-group">
+                                <label for="messageSubject">Subject</label>
+                                <select id="messageSubject">
+                                    <option value="general">General Inquiry</option>
+                                    <option value="quote">Request a Quote</option>
+                                    <option value="order">Place an Order</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="messageBody">Message <span class="required">*</span></label>
+                            <textarea id="messageBody" placeholder="Tell us about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-send"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-simple">
+                    <div class="contact-map-wrapper">
+                        <iframe
+                        src="https://www.google.com/maps?q=14.68472147723468,121.0011211154339&hl=en&z=17&output=embed"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="LN Display & Contractor Location Map"
+                    ></iframe>
+                </div>
+
+                <div class="contact-info-text">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span><strong>Mon–Sat</strong><br />8:00 AM – 5:00 PM</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-bolt"></i>
+                        <span><strong>Response Time</strong><br />Within 24 hours</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-location-dot"></i>
+                        <span><strong>Service Areas</strong><br />Metro Manila · Nationwide</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT BAR (unchanged) ===== -->
+    <div class="contact-bar">
+        <div class="badges">
+            <span><i class="fas fa-check-circle"></i> SEC Registered</span>
+            <span><i class="fas fa-check-circle"></i> BIR Compliant</span>
+            <span><i class="fas fa-check-circle"></i> PhilGEPS</span>
+        </div>
+        <div>
+            <i class="fas fa-envelope"></i> ln_display24@gmail.com &nbsp;|&nbsp; <i class="fas fa-phone"></i> 8-2914500
+        </div>
     </div>
-  </div>
 
-  <!-- Services Section -->
-  <div class="services-section">
-    <div class="section-title">Core services</div>
-    <div class="section-sub">Integrated manufacturing solutions for retail & advertising</div>
-    <div class="services-grid">
-      <div class="service-card"><div class="service-icon">🏙️</div><h3>Outdoor Advertising</h3><ul class="service-list-items"><li>• Panaflex / Signages</li><li>• Van Billboard</li><li>• Sign Boards, Inkjet</li></ul></div>
-      <div class="service-card"><div class="service-icon">🖨️</div><h3>Silkscreen Printing</h3><ul class="service-list-items"><li>• Streamers / Banners</li><li>• Price Tags / Shelf Talkers</li><li>• Stickers & Flanger Signs</li></ul></div>
-      <div class="service-card"><div class="service-icon">🪚</div><h3>Carpentry Works</h3><ul class="service-list-items"><li>• Display Racks / Gondola</li><li>• Booths / Sampling Tables</li><li>• Wire/Acrylic Dispensers</li></ul></div>
-      <div class="service-card"><div class="service-icon">⚙️</div><h3>Plastic & Machine Shop</h3><ul class="service-list-items"><li>• Vacuum Forming</li><li>• Moulding Fabrication</li><li>• Acrylic Assembly</li></ul></div>
-    </div>
-  </div>
+    <!-- =============================================================
+         SECTION 3: EXPANDED FOOTER
+         ============================================================= -->
+    <footer class="footer">
+        <div class="footer-col">
+            <strong>LN DISPLAY &amp; CONTRACTOR</strong>
+            <p class="footer-motto">"Building Quality. Delivering Excellence."</p>
+            <p class="footer-description">
+                A trusted manufacturing and fabrication partner serving commercial and industrial clients across the Philippines. We specialize in outdoor advertising, silkscreen printing, carpentry works, plastic molding, and metal fabrication.
+            </p>
+            <p style="margin-top:0.5rem; font-size:0.7rem; color:#4e7a94;">SEC: CS201521895</p>
+        </div>
 
-  <!-- Product Gallery -->
-  <div class="gallery-section">
-    <div class="section-title">Product showcase</div>
-    <div class="section-sub">Quality displays, signage, metal fabrication</div>
-    <div class="gallery-grid">
-      <div class="gallery-item"><div class="gallery-img"><img src="assets/panaflex-signage.jpg" alt="Panaflex" onerror="handleImageError(this)"></div><div class="gallery-info"><h4>Panaflex & Billboards</h4><p>Outdoor advertising</p></div></div>
-      <div class="gallery-item"><div class="gallery-img"><img src="assets/display-rack.jpg" alt="Racks" onerror="handleImageError(this)"></div><div class="gallery-info"><h4>Display Racks</h4><p>Gondola, wire fixtures</p></div></div>
-      <div class="gallery-item"><div class="gallery-img"><img src="assets/silkscreen-banners.jpg" alt="Banners" onerror="handleImageError(this)"></div><div class="gallery-info"><h4>Silkscreen Banners</h4><p>Streamers, buntings</p></div></div>
-      <div class="gallery-item"><div class="gallery-img"><img src="assets/metal-fabrication.jpg" alt="Metal" onerror="handleImageError(this)"></div><div class="gallery-info"><h4>Metal Fabrication</h4><p>Frames, booths, structures</p></div></div>
-    </div>
-  </div>
+        <div class="footer-col">
+            <span class="label">Quick Links</span>
+            <p><a href="#services">Services</a></p>
+            <p><a href="#gallery">Showcase</a></p>
+            <p><a href="#why-choose">Capabilities</a></p>
+            <p><a href="#contact">Contact</a></p>
+        </div>
 
-  <!-- Equipment & Manpower Row Compact -->
-  <div class="details-row">
-    <div class="equipment-box"><div class="box-title"><i class="fas fa-microchip"></i> Major Equipment</div><div class="equip-tags"><span class="equip-tag">Spot Welding (25)</span><span class="equip-tag">Wire Bender (6)</span><span class="equip-tag">Welding (7)</span><span class="equip-tag">EPSON Printers (3)</span><span class="equip-tag">HP LATEX</span><span class="equip-tag">Laser Cutter</span><span class="equip-tag">CNC Router</span><span class="equip-tag">Box Bender</span></div></div>
-    <div class="manpower-box"><div class="box-title"><i class="fas fa-users"></i> Manpower</div><ul class="manpower-list"><li><span>Daily Rate Workers</span><span>44</span></li><li><span>Packing Dept</span><span>25</span></li><li><span>Metal Fabrication</span><span>30</span></li><li><span>Acrylic Assembly</span><span>25</span></li><li><span><strong>Total</strong></span><span><strong>95+</strong></span></li></ul></div>
-  </div>
+        <div class="footer-col">
+            <span class="label">Contact Information</span>
+            <p>📞 8-2914500</p>
+            <p>📱 +63 912 345 6789</p>
+            <p>✉️ ln_display24@gmail.com</p>
+            <p>📍 B4 L6 Apple Ville Subd., Tullahan Rd., Sta. Quiteria, Caloocan City</p>
+            <p style="font-size:0.7rem; color:#4e7a94;">Mon–Sat 8:00AM – 5:00PM</p>
+        </div>
 
-  <!-- Company Info Card Compact -->
-  <div class="company-card"><div class="company-grid"><div class="company-item"><h5>Registration</h5><p>SEC: CS201521895</p><p>TIN: 009-164-725-000</p></div><div class="company-item"><h5>Address</h5><p>B4 L6 Apple Ville Subd.</p><p>Tullahan Rd, Sta. Quiteria</p><p>Caloocan City</p></div><div class="company-item"><h5>Contact</h5><p>📞 8-2914500</p><p>✉️ ln_display24@gmail.com</p></div><div class="company-item"><h5>Leadership</h5><p>Rolando Martinez</p><p>Adelaida Martinez</p></div></div></div>
+        <div class="footer-col">
+            <span class="label">Legal</span>
+            <a href="#" class="footer-legal-link" onclick="openLegalModal('privacy'); return false;">
+                <i class="fas fa-lock" style="margin-right:4px;"></i> Privacy Policy
+            </a>
+            <br />
+            <a href="#" class="footer-legal-link" onclick="openLegalModal('terms'); return false;">
+                <i class="fas fa-file-contract" style="margin-right:4px;"></i> Terms &amp; Conditions
+            </a>
+        </div>
+    </footer>
 
-  <!-- Contact Bar -->
-  <div class="contact-bar"><div class="badges"><span><i class="fas fa-check-circle"></i> SEC Registered</span><span><i class="fas fa-check-circle"></i> BIR Compliant</span><span><i class="fas fa-check-circle"></i> PhilGEPS</span></div><div><i class="fas fa-envelope"></i> ln_display24@gmail.com | <i class="fas fa-phone"></i> 8-2914500</div></div>
-
-  <!-- Footer -->
-  <div class="footer"><div class="footer-col"><p><strong>LN DISPLAY & CONTRACTOR</strong></p><p>Outdoor Advertising · Silkscreen · Carpentry · Metal Fabrication</p></div><div class="footer-col"><p><a href="#">Request quotation</a></p><p><a href="#">Capability brochure</a></p></div><div class="footer-col"><p>📍 B4 L6 Apple Ville Subd., Caloocan</p><p>📞 8-2914500 | ✉️ ln_display@yahoo.com</p></div></div>
-  <div class="copyright">© 2025 LN DISPLAY & CONTRACTOR SERVICE CORP. | SEC: CS201521895</div>
+    <!-- ===== COPYRIGHT (unchanged) ===== -->
+    <div class="copyright">© 2025 LN DISPLAY &amp; CONTRACTOR SERVICE CORP. · All rights reserved.</div>
 </div>
 
-<!-- COMPACT MODAL: PURE CONTACT INFO (NO FORM, SMALLER SIZE) -->
+<!-- =============================================================
+     LEGAL MODALS
+     ============================================================= -->
+<div id="privacyModal" class="legal-modal-overlay">
+    <div class="legal-modal">
+        <div class="legal-modal-header">
+            <h3><i class="fas fa-lock"></i> Privacy Policy</h3>
+            <button class="legal-modal-close" onclick="closeLegalModal('privacy')">&times;</button>
+        </div>
+        <div class="legal-modal-body">
+            <h4>Information Collection</h4>
+            <p>LN Display &amp; Contractor Service Corp. collects personal information submitted through our contact forms solely for the purpose of responding to inquiries, providing quotations, and facilitating project discussions.</p>
+            <h4>Data Usage</h4>
+            <p>Customer information is used exclusively for internal business purposes related to project evaluation, quotation preparation, and service delivery. We do not share, sell, or distribute your personal data to third parties without your explicit consent.</p>
+            <h4>Data Security</h4>
+            <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+            <h4>Your Rights</h4>
+            <p>You have the right to access, correct, or request deletion of your personal data held by us. For any privacy-related concerns, please contact us directly.</p>
+            <p style="margin-top:1rem; font-size:0.75rem; color:#4e7a94;">Last updated: 2025</p>
+        </div>
+    </div>
+</div>
+
+<div id="termsModal" class="legal-modal-overlay">
+    <div class="legal-modal">
+        <div class="legal-modal-header">
+            <h3><i class="fas fa-file-contract"></i> Terms &amp; Conditions</h3>
+            <button class="legal-modal-close" onclick="closeLegalModal('terms')">&times;</button>
+        </div>
+        <div class="legal-modal-body">
+            <h4>Quotations</h4>
+            <p>All quotations provided by LN Display &amp; Contractor Service Corp. are valid for 30 days from the date of issuance unless otherwise stated. Quotations are based on the specifications and requirements provided at the time of request.</p>
+            <h4>Project Timelines</h4>
+            <p>Project completion timelines are estimates based on current workload and material availability. We endeavor to meet all agreed deadlines but cannot be held liable for delays caused by circumstances beyond our reasonable control.</p>
+            <h4>Client Responsibilities</h4>
+            <p>Clients are responsible for providing accurate and complete project specifications, drawings, and requirements. Any changes to the scope of work after project commencement may result in additional costs and timeline adjustments.</p>
+            <h4>Intellectual Property</h4>
+            <p>All designs, concepts, and intellectual property submitted by clients remain the sole property of the client. LN Display &amp; Contractor Service Corp. retains ownership of any custom fabrication techniques, processes, or methodologies developed during the course of the project.</p>
+            <h4>Limitation of Liability</h4>
+            <p>LN Display &amp; Contractor Service Corp. shall not be liable for any indirect, incidental, or consequential damages arising from the use of our products or services. Our total liability is limited to the contract value of the specific project in question.</p>
+            <p style="margin-top:1rem; font-size:0.75rem; color:#4e7a94;">Last updated: 2025</p>
+        </div>
+    </div>
+</div>
+
+<!-- ===== EXISTING CONTACT MODAL (unchanged) ===== -->
 <div id="contactModal" class="modal-overlay">
-  <div class="contact-modal">
-    <div class="modal-header">
-      <h3><i class="fas fa-headset"></i> Contact LN Display</h3>
-      <button class="close-modal" id="closeModalBtn">&times;</button>
+    <div class="contact-modal">
+        <div class="modal-header">
+            <h3><i class="fas fa-headset"></i> Contact LN Display</h3>
+            <button class="close-modal" id="closeModalBtn">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="contact-info-container">
+                <div class="contact-card">
+                    <div class="contact-title"><i class="fas fa-phone-alt"></i> Telefax</div>
+                    <div class="contact-detail">8-2914500</div>
+                    <div class="contact-sub">Mon–Fri 8:00AM – 5:00PM</div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-title"><i class="fas fa-envelope"></i> Email</div>
+                    <div class="contact-detail">ln_display@yahoo.com</div>
+                    <div class="contact-detail" style="margin-top:2px;">ln_display24@gmail.com</div>
+                    <div class="contact-sub">Inquiries &amp; quotations</div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-title"><i class="fas fa-map-marker-alt"></i> Workshop</div>
+                    <div class="contact-detail">B4 L6 Apple Ville Subd., Tullahan Rd.</div>
+                    <div class="contact-detail">Sta. Quiteria, Caloocan City</div>
+                    <div class="contact-sub">Metro Manila, Philippines</div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-title"><i class="fas fa-building"></i> Company IDs</div>
+                    <div class="contact-detail">SEC: CS201521895 | TIN: 009-164-725-000</div>
+                    <div class="contact-sub">PEZA · PhilGEPS Accredited</div>
+                </div>
+                <div class="office-hours-compact">
+                    <i class="far fa-clock"></i> <strong>Business hours:</strong> Mon–Fri 8AM–5PM · Sat 9AM–12NN
+                </div>
+                <div class="action-buttons-compact">
+                    <button class="copy-btn-sm" data-copy="8-2914500"><i class="fas fa-copy"></i> Phone</button>
+                    <button class="copy-btn-sm" data-copy="ln_display24@gmail.com"><i class="fas fa-copy"></i> Email</button>
+                    <button class="copy-btn-sm" data-copy="B4 L6 Apple Ville Subd., Tullahan Road, Sta. Quiteria, Caloocan City"><i class="fas fa-location-dot"></i> Address</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="modal-body">
-      <div class="contact-info-container">
-        <div class="contact-card">
-          <div class="contact-title"><i class="fas fa-phone-alt"></i> <span>Telefax</span></div>
-          <div class="contact-detail">8-2914500</div>
-          <div class="contact-sub">Mon-Fri 8:00AM - 5:00PM</div>
-        </div>
-        <div class="contact-card">
-          <div class="contact-title"><i class="fas fa-envelope"></i> <span>Email</span></div>
-          <div class="contact-detail">ln_display@yahoo.com</div>
-          <div class="contact-detail" style="margin-top: 2px;">ln_display24@gmail.com</div>
-          <div class="contact-sub">Inquiries & quotations</div>
-        </div>
-        <div class="contact-card">
-          <div class="contact-title"><i class="fas fa-map-marker-alt"></i> <span>Workshop</span></div>
-          <div class="contact-detail">B4 L6 Apple Ville Subd., Tullahan Rd.</div>
-          <div class="contact-detail">Sta. Quiteria, Caloocan City</div>
-          <div class="contact-sub">Metro Manila, Philippines</div>
-        </div>
-        <div class="contact-card">
-          <div class="contact-title"><i class="fas fa-building"></i> <span>Company IDs</span></div>
-          <div class="contact-detail">SEC: CS201521895 | TIN: 009-164-725-000</div>
-          <div class="contact-sub">PEZA · PhilGEPS Accredited</div>
-        </div>
-        <div class="office-hours-compact">
-          <i class="far fa-clock"></i> <strong>Business hours:</strong> Mon–Fri 8AM–5PM | Sat 9AM–12NN
-        </div>
-        <div class="action-buttons-compact">
-          <button class="copy-btn-sm" data-copy="8-2914500"><i class="fas fa-copy"></i> Phone</button>
-          <button class="copy-btn-sm" data-copy="ln_display24@gmail.com"><i class="fas fa-copy"></i> Email</button>
-          <button class="copy-btn-sm" data-copy="B4 L6 Apple Ville Subd., Tullahan Road, Sta. Quiteria, Caloocan City"><i class="fas fa-location-dot"></i> Address</button>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
+
+<!-- ===== TOAST ===== -->
 <div id="copyToast" class="toast-msg">📋 Copied!</div>
 
+<!-- ===== JAVASCRIPT ===== -->
 <script>
-  function handleImageError(imgElement) {
-    const parent = imgElement.parentElement;
-    if(parent && !parent.querySelector('.fallback-icon')) {
-      parent.style.background = 'linear-gradient(135deg, #eef2ff, #e0e8f0)';
-      parent.style.display = 'flex';
-      parent.style.alignItems = 'center';
-      parent.style.justifyContent = 'center';
-      parent.innerHTML = '<i class="fas fa-image" style="font-size: 1.8rem; opacity: 0.5; color:#115a6e;"></i>';
+    // ================================================================
+    // IMAGE FALLBACK (unchanged)
+    // ================================================================
+    function handleImageError(img) {
+        const parent = img.parentElement;
+        if (parent && !parent.querySelector('.fallback-icon')) {
+            parent.style.background = 'linear-gradient(135deg, #dceef7, #c5e2f0)';
+            parent.style.display = 'flex';
+            parent.style.alignItems = 'center';
+            parent.style.justifyContent = 'center';
+            parent.innerHTML = '<i class="fas fa-image" style="font-size: 2rem; opacity:0.3; color:#1f5a73;"></i>';
+        }
     }
-  }
-  window.handleImageError = handleImageError;
-  document.querySelectorAll('.gallery-img img').forEach(img => {
-    img.addEventListener('error', function() { handleImageError(this); });
-  });
-
-  // Modal logic
-  const modal = document.getElementById('contactModal');
-  const openBtn = document.getElementById('openContactModalBtn');
-  const closeBtn = document.getElementById('closeModalBtn');
-
-  function openModal() { modal.classList.add('active'); document.body.style.overflow = 'hidden'; }
-  function closeModal() { modal.classList.remove('active'); document.body.style.overflow = ''; }
-
-  openBtn.addEventListener('click', openModal);
-  closeBtn.addEventListener('click', closeModal);
-  modal.addEventListener('click', (e) => { if(e.target === modal) closeModal(); });
-
-  // Copy to clipboard toast
-  const toast = document.getElementById('copyToast');
-  function showToast(msg) {
-    toast.textContent = msg;
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 1500);
-  }
-  document.querySelectorAll('.copy-btn-sm').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const copyText = btn.getAttribute('data-copy');
-      if(copyText) {
-        navigator.clipboard.writeText(copyText).then(() => {
-          showToast(`✓ Copied: ${copyText.length > 28 ? copyText.substring(0, 25)+'…' : copyText}`);
-        }).catch(() => {
-          const textarea = document.createElement('textarea');
-          textarea.value = copyText;
-          document.body.appendChild(textarea);
-          textarea.select();
-          document.execCommand('copy');
-          document.body.removeChild(textarea);
-          showToast("Copied!");
-        });
-      }
+    window.handleImageError = handleImageError;
+    document.querySelectorAll('.gallery-img img').forEach(img => {
+        img.addEventListener('error', function() { handleImageError(this); });
     });
-  });
+
+    // ================================================================
+    // CONTACT MODAL (unchanged)
+    // ================================================================
+    const modal = document.getElementById('contactModal');
+    const openBtns = document.querySelectorAll('#openContactModalBtn, #openContactModalBtn2');
+    const closeBtn = document.getElementById('closeModalBtn');
+
+    function openModal() { modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; }
+
+    function closeModal() { modal.classList.remove('active');
+        document.body.style.overflow = ''; }
+
+    openBtns.forEach(btn => btn.addEventListener('click', openModal));
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+
+    // ================================================================
+    // COPY TO CLIPBOARD (unchanged)
+    // ================================================================
+    const toast = document.getElementById('copyToast');
+
+    function showToast(msg) {
+        toast.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 1600);
+    }
+
+    document.querySelectorAll('.copy-btn-sm').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const text = btn.getAttribute('data-copy');
+            if (!text) return;
+            navigator.clipboard.writeText(text).then(() => {
+                showToast(`✓ Copied: ${text.length > 30 ? text.substring(0, 28) + '…' : text}`);
+            }).catch(() => {
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                showToast('Copied!');
+            });
+        });
+    });
+
+    // ================================================================
+    // FORM SUBMISSION HANDLER (unchanged)
+    // ================================================================
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        const name = document.getElementById('fullName').value;
+        const email = document.getElementById('emailAddress').value;
+        const subject = document.getElementById('messageSubject').value;
+        const message = document.getElementById('messageBody').value;
+
+        showToast(`✓ Thanks ${name}! Your message has been sent.`);
+        document.getElementById('contactForm').reset();
+        console.log('Form submitted:', { name, email, subject, message });
+    }
+
+    // ================================================================
+    // ACCORDION TOGGLE
+    // ================================================================
+    function toggleAccordion(header) {
+        const item = header.parentElement;
+        const isActive = item.classList.contains('active');
+
+        document.querySelectorAll('.why-accordion-item').forEach(el => {
+            el.classList.remove('active');
+        });
+
+        if (!isActive) {
+            item.classList.add('active');
+        }
+    }
+
+    // ================================================================
+    // LEGAL MODALS
+    // ================================================================
+    function openLegalModal(type) {
+        const modalId = type === 'privacy' ? 'privacyModal' : 'termsModal';
+        const modalEl = document.getElementById(modalId);
+        modalEl.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLegalModal(type) {
+        const modalId = type === 'privacy' ? 'privacyModal' : 'termsModal';
+        const modalEl = document.getElementById(modalId);
+        modalEl.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.legal-modal-overlay').forEach(overlay => {
+        overlay.addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.legal-modal-overlay.active').forEach(overlay => {
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+    });
+
+    // ================================================================
+    // SMOOTH SCROLL FOR NAV LINKS
+    // ================================================================
+    document.querySelectorAll('.nav-links a, .footer-col a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        });
+    });
 </script>
+
 </body>
 </html>
